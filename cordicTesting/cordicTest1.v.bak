@@ -1,0 +1,7 @@
+module cordicTest1(SW, CLOCK_50, LEDR, HEX0);
+	input [9:0] SW;
+	output [9:0] LEDR;
+	output [6:0] HEX0;
+	
+	
+endmodule
