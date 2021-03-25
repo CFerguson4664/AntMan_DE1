@@ -1,0 +1,4 @@
+Warning (10268): Verilog HDL information at memoryController.v(86): always construct contains both blocking and non-blocking assignments File: C:/Users/overk/OneDrive - Trine University/AntMan/memoryController.v Line: 86
+Warning (10268): Verilog HDL information at FrameBufferDisplay.v(112): always construct contains both blocking and non-blocking assignments File: C:/Users/overk/OneDrive - Trine University/AntMan/FrameBufferDisplay.v Line: 112
+Warning (10268): Verilog HDL information at memTest.v(85): always construct contains both blocking and non-blocking assignments File: C:/Users/overk/OneDrive - Trine University/AntMan/memTest.v Line: 85
+Warning (10268): Verilog HDL information at memoryControllerTest.v(92): always construct contains both blocking and non-blocking assignments File: C:/Users/overk/OneDrive - Trine University/AntMan/memoryControllerTest.v Line: 92

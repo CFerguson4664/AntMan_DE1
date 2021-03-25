@@ -1,0 +1,1 @@
+module memoryController(address,dataIn,dataOut,write)
