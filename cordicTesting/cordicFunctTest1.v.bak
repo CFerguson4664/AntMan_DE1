@@ -1,0 +1,6 @@
+module cordicFunctTest1(SW,LEDR,KEY,HEX0,HEX1,HEX2,HEX3);
+	input[9:0] SW;
+	input[3:0] KEY;
+	output[9:0] LEDR;
+	output[6:0] HEX0,HEX1,HEX2,HEX3;
+	

@@ -1,0 +1,74 @@
+Info: Starting: Create simulation model
+Info: qsys-generate C:\Users\EWann\Documents\trine\sp21\ece363\quartus\AntMan_DE1\cordicTesting\unnamed.qsys --simulation=VERILOG --allow-mixed-language-simulation --output-directory=C:\Users\EWann\Documents\trine\sp21\ece363\quartus\AntMan_DE1\cordicTesting\unnamed\simulation --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading cordicTesting/unnamed.qsys
+Progress: Reading input file
+Progress: Adding CORDIC_0 [altera_CORDIC 19.1]
+Progress: Parameterizing module CORDIC_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: unnamed: Generating unnamed "unnamed" for SIM_VERILOG
+Info: CORDIC_0: C:/intelfpga_lite/19.1/quartus/dspba/backend/windows64/cmdPolyEval -target CycloneV -frequency 200 -name unnamed_CORDIC_0 -noChanValid -faithfulRounding -printMachineReadable -lang VHDL -speedgrade 6 FXPVecRotate 12 10 1 8 1
+Info: CORDIC_0: Latency on Cyclone V is 19 cycles
+Info: CORDIC_0: DSP Blocks Used: 0
+Info: CORDIC_0: LUTs Used: 1886
+Info: CORDIC_0: Memory Bits Used: 0
+Info: CORDIC_0: Memory Blocks Used: 0
+Info: CORDIC_0: "unnamed" instantiated altera_CORDIC "CORDIC_0"
+Info: unnamed: Done "unnamed" with 2 modules, 4 files
+Info: qsys-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=C:\Users\EWann\Documents\trine\sp21\ece363\quartus\AntMan_DE1\cordicTesting\unnamed\unnamed.spd --output-directory=C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/cordicTesting/unnamed/simulation/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=C:\Users\EWann\Documents\trine\sp21\ece363\quartus\AntMan_DE1\cordicTesting\unnamed\unnamed.spd --output-directory=C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/cordicTesting/unnamed/simulation/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/cordicTesting/unnamed/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib/altera_syn_attributes.vhd is required for simulation
+Info: Generating the following file(s) for VCSMX simulator in C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/cordicTesting/unnamed/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/cordicTesting/unnamed/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	1 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/cordicTesting/unnamed/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/cordicTesting/unnamed/simulation/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create Modelsim Project.
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Users\EWann\Documents\trine\sp21\ece363\quartus\AntMan_DE1\cordicTesting\unnamed.qsys --block-symbol-file --output-directory=C:\Users\EWann\Documents\trine\sp21\ece363\quartus\AntMan_DE1\cordicTesting\unnamed --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading cordicTesting/unnamed.qsys
+Progress: Reading input file
+Progress: Adding CORDIC_0 [altera_CORDIC 19.1]
+Progress: Parameterizing module CORDIC_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\EWann\Documents\trine\sp21\ece363\quartus\AntMan_DE1\cordicTesting\unnamed.qsys --synthesis=VERILOG --output-directory=C:\Users\EWann\Documents\trine\sp21\ece363\quartus\AntMan_DE1\cordicTesting\unnamed\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading cordicTesting/unnamed.qsys
+Progress: Reading input file
+Progress: Adding CORDIC_0 [altera_CORDIC 19.1]
+Progress: Parameterizing module CORDIC_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: unnamed: Generating unnamed "unnamed" for QUARTUS_SYNTH
+Info: CORDIC_0: C:/intelfpga_lite/19.1/quartus/dspba/backend/windows64/cmdPolyEval -target CycloneV -frequency 200 -name unnamed_CORDIC_0 -noChanValid -faithfulRounding -printMachineReadable -lang VHDL -speedgrade 6 FXPVecRotate 12 10 1 8 1
+Info: CORDIC_0: Latency on Cyclone V is 19 cycles
+Info: CORDIC_0: DSP Blocks Used: 0
+Info: CORDIC_0: LUTs Used: 1886
+Info: CORDIC_0: Memory Bits Used: 0
+Info: CORDIC_0: Memory Blocks Used: 0
+Info: CORDIC_0: "unnamed" instantiated altera_CORDIC "CORDIC_0"
+Info: unnamed: Done "unnamed" with 2 modules, 4 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

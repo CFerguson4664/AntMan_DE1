@@ -1,0 +1,30 @@
+module arrTest1(SW, LEDR, HEX0,HEX1,HEX2,HEX3);
+	input[9:0] SW;
+	output[9:0] LEDR;
+	output[6:0] HEX0, HEX1, HEX2, HEX3;
+
+	parameter ROW = 32; // -
+	parameter COL = 32; // |
+	
+	// reg [packed] varname [unpacked]
+	reg [ROW:0] grid [COL:0];
+	
+	
+	integer i;
+	initial begin
+		for (i=0; i < ROW; i=i+1) begin
+			grid[i] = i;
+		end
+	end
+	
+//	always @ (*)
+//		casex(SW)
+//			0:display=grid
+//		endcase
+
+	bin7seghex h0(grid[SW[5:0]][3:0], HEX0);
+	bin7seghex h1(grid[SW[5:0]][7:4], HEX1);
+	bin7seghex h2(grid[SW[5:0]][11:8], HEX2);
+	bin7seghex h3(grid[SW[5:0]][15:12], HEX3);
+	
+emdmodule

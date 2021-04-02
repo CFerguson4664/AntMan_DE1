@@ -3,7 +3,7 @@ module cordicTest2(SW, KEY, CLOCK_50, LEDR, HEX0,HEX1,HEX2,HEX3);
 	input [3:0] KEY;
 	input CLOCK_50;
 	output [9:0] LEDR;
-	output [6:0] HEX0,HEX1,HEX2,HEX3
+	output [6:0] HEX0,HEX1,HEX2,HEX3;
 	
 	
 	// ROTATE SETUP

@@ -1,0 +1,20 @@
+# system info unnamed on 2021.03.20.18:31:15
+system_info:
+name,value
+DEVICE,5CSEMA5F31C6
+DEVICE_FAMILY,Cyclone V
+GENERATION_ID,1616279474
+#
+#
+# Files generated for unnamed on 2021.03.20.18:31:15
+files:
+filepath,kind,attributes,module,is_top
+simulation/unnamed.v,VERILOG,,unnamed,true
+simulation/submodules/dspba_library_package.vhd,VHDL,,unnamed_CORDIC_0,false
+simulation/submodules/dspba_library.vhd,VHDL,,unnamed_CORDIC_0,false
+simulation/submodules/unnamed_CORDIC_0.vhd,VHDL,,unnamed_CORDIC_0,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+unnamed.CORDIC_0,unnamed_CORDIC_0
