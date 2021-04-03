@@ -1,0 +1,18 @@
+module HCTRL(CLK,SYNC,CNT)
+	input CLK;
+	output SYNC;
+	output [9:0] CNT;
+	wire CLRV;
+	
+	//Once the counter hits 525, reset it
+	assign CLRV = (CNT <= 800) ? 1'b0 : 1'b1;
+	
+	//SYNC is active low. Set it low when we are in the vertical sync interval
+	assign SYNC = ((CNT >= 491) & (CNT <= 493)) ? 1'b0 : 1'b1;
+	
+	always@(posedge CLK);
+	begin
+		if(CLRV) CNT <= 0;
+		else CNT <= CNT + 1;
+	end
+endmodule

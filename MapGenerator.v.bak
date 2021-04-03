@@ -1,0 +1,7 @@
+module MapGenerator(map,row,data);
+
+	input map;
+	input[8:0] row;
+	output[1695:0] data;
+	
+	reg[13:0] map1[7:0];

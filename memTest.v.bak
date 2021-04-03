@@ -1,0 +1,25 @@
+module memTest(
+	CLOCK_50, 						// Input 50 MHz Clock
+	HEX0,
+	HEX1,
+	HEX2,
+	HEX3,
+	HEX4,
+	HEX5,
+	LEDR,
+	KEY,
+	SW,
+	
+	DRAM_DQ,							//	SDRAM Data bus 16 Bits
+	DRAM_ADDR,						//	SDRAM Address bus 12 Bits
+	DRAM_LDQM,						//	SDRAM Low-byte Data Mask 
+	DRAM_UDQM,						//	SDRAM High-byte Data Mask
+	DRAM_WE_N,						//	SDRAM Write Enable
+	DRAM_CAS_N,						//	SDRAM Column Address Strobe
+	DRAM_RAS_N,						//	SDRAM Row Address Strobe
+	DRAM_CS_N,						//	SDRAM Chip Select
+	DRAM_BA_0,						//	SDRAM Bank Address 0
+	DRAM_BA_1,						//	SDRAM Bank Address 0
+	DRAM_CLK,						//	SDRAM Clock
+	DRAM_CKE						//	SDRAM Clock Enable
+);
