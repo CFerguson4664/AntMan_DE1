@@ -1,5 +1,5 @@
 Assembler report for cordicTest
-Fri Apr 02 00:28:01 2021
+Sun Apr 04 19:24:38 2021
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -38,9 +38,9 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Apr 02 00:28:01 2021 ;
+; Assembler Status      ; Successful - Sun Apr 04 19:24:38 2021 ;
 ; Revision Name         ; cordicTest                            ;
-; Top-level Entity Name ; multCordicFunctTest3                  ;
+; Top-level Entity Name ; topCordicFunctTest4                   ;
 ; Family                ; Cyclone V                             ;
 ; Device                ; 5CSEMA5F31C6                          ;
 +-----------------------+---------------------------------------+
@@ -67,8 +67,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+------------------------------------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                                          ;
 +----------------+------------------------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x00C46613                                                                                                       ;
-; Checksum       ; 0x00C46613                                                                                                       ;
+; JTAG usercode  ; 0x00CBDF83                                                                                                       ;
+; Checksum       ; 0x00CBDF83                                                                                                       ;
 +----------------+------------------------------------------------------------------------------------------------------------------+
 
 
@@ -78,14 +78,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Fri Apr 02 00:27:54 2021
+    Info: Processing started: Sun Apr 04 19:24:30 2021
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off cordicTest -c cordicTest
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4851 megabytes
-    Info: Processing ended: Fri Apr 02 00:28:01 2021
-    Info: Elapsed time: 00:00:07
+    Info: Peak virtual memory: 4854 megabytes
+    Info: Processing ended: Sun Apr 04 19:24:38 2021
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:07
 
 
