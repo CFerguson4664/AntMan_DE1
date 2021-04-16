@@ -1,8 +1,16 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="fba8dda9ab3e2708174d"/>
+    <hash md5_digest_80b="9afdedde48b06037f175"/>
   </project>
   <file_info>
     <file device="5CSEMA5F31C6" path="AntMan.sof" usercode="0xFFFFFFFF"/>
   </file_info>
+  <sld_infos>
+    <sld_info hpath="multCordicFunctTest7:m0|unnamed:c0" name="c0">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME unnamed HAS_SOPCINFO 1 GENERATION_ID 1616279479"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+  </sld_infos>
 </sld_project_info>

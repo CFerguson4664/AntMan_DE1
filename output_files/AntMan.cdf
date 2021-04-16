@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA5F31) Path("C:/Users/overk/OneDrive/Desktop/AntMan_DE1/output_files/") File("AntMan.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA5F31) Path("C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/output_files/") File("AntMan.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

@@ -75,13 +75,13 @@ reg[10:0] imgX = 80;
 reg[10:0] imgOldY = 80;
 reg[10:0] imgOldX = 80;
 
-reg[46:0] ant[46:0];
+reg[56:0] ant[56:0];
 
 reg[46:0] test = 47'b00000000000000000000111111000000000000000000000;
 
 assign LEDR[9] = inBounds;
 
-initial begin
+/*initial begin
 	ant[0] =  47'b00_00000_00000_00000_00000_00000_00000_00000_00000_00000;
 	ant[1] =  47'b00000000000000000000000000000000000000000000000;
 	ant[2] =  47'b00000000000000000000000000000000000000000000000;
@@ -129,7 +129,20 @@ initial begin
 	ant[44] = 47'b00000000000000000000000000000000000000000000000;
 	ant[45] = 47'b00000000000000000000000000000000000000000000000;
 	ant[46] = 47'b00000000000000000000000000000000000000000000000;
-end
+end*/
+
+reg CordicRST;
+reg[9:0] CordicIDX = 0;
+wire[56:0] CordicDATA;
+wire CordicDONE;
+reg [18:0] angle = 13'b0_00_0000000000_000000;
+
+assign LEDR[8] = CordicDONE;
+
+multCordicFunctTest6 m0(pixelCLK, CordicRST, CordicIDX, angle[18:6], CordicDATA, CordicDONE);//, HEX0,HEX1);
+
+
+
 
 
 always@(posedge pixelCLK)
@@ -217,10 +230,34 @@ begin
 				count <= count + 1;
 			end
 	endcase
+	
+	
+	if(HCount == 0 && VCount == 0) begin
+		CordicRST <= 1;
+	end else begin
+		CordicRST <= 0;
+	end
+	
+	if(CordicDONE == 1 && CordicIDX < 500) begin
+		ant[CordicIDX - 2] <= CordicDATA;
+		CordicIDX <= CordicIDX + 1; 
+	end else begin 
+		CordicIDX <= 0;
+//		if (angle > 18'b1_11_1111111111_000000) begin
+		if (angle == 18'b0_11_0010010000_000000) begin
+//		if (angle > 18'b1_00_1101110000_000000) begin
+			angle <= angle*-1;
+		end else begin
+			angle <= angle+1;
+		end
+		
+	end
+
+	
  	
-	if(VPixel > (imgY - 24) && VPixel < (imgY + 24) && HPixel > (imgX - 20) && HPixel < (imgX + 28))
+	if(VPixel > (imgY - 29) && VPixel < (imgY + 29) && HPixel > (imgX - 25) && HPixel < (imgX + 33))
 	begin
-		if(ant[VPixel-(imgY - 24)][HPixel - (imgX - 20)+:1] == 1)
+		if(ant[VPixel-(imgY - 29)][HPixel - (imgX - 25)+:1] == 1)
 		begin
 			mapData2[!VCount[0]][(HPixel * 2)] <= 1'b0;
 			mapData2[!VCount[0]][(HPixel * 2) + 1] <= 1'b1;
