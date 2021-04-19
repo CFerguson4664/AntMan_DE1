@@ -1,12 +1,14 @@
 // trying to figure out having the image as an output
 //module multCordicFunctTest4(SW,LEDR,KEY,CLOCK_50,HEX0,HEX1,HEX2,HEX3);
-module multCordicFunctTest7(clk, reset, lineCount, theta_i, lineResult, done);//, HEX0, HEX1);
+module multCordicFunctTest7(clk, reset, lineCount, theta_i, lineResult, done, ant1X,ant1Y,ant2X,ant2Y,xcomp,ycomp);//, HEX0, HEX1);
 	input clk, reset;
 	input [9:0] lineCount;
 	input [12:0] theta_i;
 //	output [6:0] HEX0, HEX1;
 	output reg done = 0;
 	output reg [56:0] lineResult;
+	output reg[5:0] ant1X,ant1Y,ant2X,ant2Y;
+	output reg[9:0] xcomp,ycomp;
 	
 //	reg [6:0] h0, h1;
 	
@@ -1353,6 +1355,9 @@ module multCordicFunctTest7(clk, reset, lineCount, theta_i, lineResult, done);//
 	reg [9:0] countD = 0;
 	reg [4:0] pipeCleanCount = 0;
 	
+	
+	
+	
 	// output from cordic:
 	// x,x,x,x,x,0,1,2,3
 	
@@ -1442,7 +1447,22 @@ module multCordicFunctTest7(clk, reset, lineCount, theta_i, lineResult, done);//
 			// set values
 			// y_o[7:2] is the 'whole number' part of the output
 			img_rotated[y_o[7:2]+y_offset][x_o[7:2]+x_offset] <= 1;
-			img_rotated[y_offset][x_offset] <= 0;
+			//img_rotated[y_offset][x_offset] <= 0;
+			
+			if(countD == pipeOffset + 1) begin
+				ant1X = x_o[7:2]+x_offset;
+				ant1Y = y_o[7:2]+y_offset;
+			end
+			
+			if(countD == pipeOffset + 29) begin
+				ant2X = x_o[7:2]+x_offset;
+				ant2Y = y_o[7:2]+y_offset;
+			end
+			
+			if(countD == pipeOffset + 125) begin
+				xcomp = x_o[9:0];
+				ycomp = y_o[9:0];
+			end
 			
 		end else begin
 			pipeCleanCount <= pipeCleanCount + 1;
