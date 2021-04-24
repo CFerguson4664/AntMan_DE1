@@ -73,11 +73,15 @@ wire[17:0] startX,startY;
 MapGenerator mp(VPixel,mapData,imgX,imgY,inBounds,HEX0,HEX1,ant1X2,ant1Y2,ant2X2,ant2Y2, ant1IB,ant2IB,SW[1:0],KEY[0],startX,startY,win);
 
 wire FW,TLeft,TRight;
-antFSM antFSMMain(ant1IB,ant2IB,FW,TLeft,TRight,logicCLK,KEY[0]);
+wire [1:0] antState;
+//antFSM antFSMMain(ant1IB,ant2IB,FW,TLeft,TRight,logicCLK,KEY[0]);
+antFSM antFMSMain(.LAntenna(ant1IB), .RAntenna(ant2IB), .FW(FW), .TLeft(TLeft), .TRight(TRight), .CLK(/*logicCLK*/pixelCLK), .reset(KEY[0]), .antState(antState));
 
 assign LEDR[1] = ant1IB;
 assign LEDR[0] = ant2IB;
 assign LEDR[9] = win;
+
+bin7seghex(antState, HEX2);
 
 assign newLine = (HCount == 1086) ? 1'b1 : 1'b0;
 
@@ -106,14 +110,14 @@ wire CordicDONE;
 //reg [18:0] angle = 18'b1_00_1101110000_000000; // -pi
 reg [21:0] angle = 1;
 
-assign LEDR[8] = CordicDONE;
+//assign LEDR[8] = CordicDONE;
 
 wire[5:0] ant1X,ant1Y,ant2X,ant2Y;
 
 wire signed[9:0]xcomp,ycomp;
 wire[10:0] ant1X2,ant1Y2,ant2X2,ant2Y2;
 
-multCordicFunctTest7 m0(logicCLK, CordicRST, CordicIDX, angle[21:9], CordicDATA, CordicDONE, ant1X,ant1Y,ant2X,ant2Y,xcomp,ycomp);//, HEX0,HEX1);
+multCordicFunctTest7 m0(/*logicCLK*/pixelCLK, CordicRST, CordicIDX, angle[21:9], CordicDATA, CordicDONE, ant1X,ant1Y,ant2X,ant2Y,xcomp,ycomp);//, HEX0,HEX1);
 
 reg[5:0] value1,value2;
 
@@ -122,17 +126,20 @@ assign ant1Y2 = ant1Y + imgY - 28;
 
 assign ant2X2 = ant2X + imgX - 28;
 assign ant2Y2 = ant2Y + imgY - 28;
+//
+//assign LEDR[5] = xcomp[9];
+//assign LEDR[4] = xcomp[8];
+//
+//assign LEDR[3] = ycomp[9];
+//assign LEDR[2] = ycomp[8];
+assign LEDR[5:4] = antState;
+assign LEDR[6] = TRight;
+assign LEDR[7] = TLeft;
+assign LEDR[8] = FW;
 
-assign LEDR[5] = xcomp[9];
-assign LEDR[4] = xcomp[8];
-
-assign LEDR[3] = ycomp[9];
-assign LEDR[2] = ycomp[8];
 
 
-
-
-always@(posedge logicCLK or negedge KEY[0])
+always@(posedge /*logicCLK*/pixelCLK or negedge KEY[0])
 begin
 	
 	if(KEY[0] == 1'b0)

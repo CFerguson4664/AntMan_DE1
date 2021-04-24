@@ -28,7 +28,7 @@ VGA_B[4] << blue[4].DB_MAX_OUTPUT_PORT_TYPE
 VGA_B[5] << blue[5].DB_MAX_OUTPUT_PORT_TYPE
 VGA_B[6] << blue[6].DB_MAX_OUTPUT_PORT_TYPE
 VGA_B[7] << blue[7].DB_MAX_OUTPUT_PORT_TYPE
-VGA_CLK << logicCLK.DB_MAX_OUTPUT_PORT_TYPE
+VGA_CLK << pixelCLK.DB_MAX_OUTPUT_PORT_TYPE
 HEX0[0] << MapGenerator:mp.port5
 HEX0[1] << MapGenerator:mp.port5
 HEX0[2] << MapGenerator:mp.port5
@@ -43,13 +43,13 @@ HEX1[3] << MapGenerator:mp.port6
 HEX1[4] << MapGenerator:mp.port6
 HEX1[5] << MapGenerator:mp.port6
 HEX1[6] << MapGenerator:mp.port6
-HEX2[0] << <GND>
-HEX2[1] << <GND>
-HEX2[2] << <GND>
-HEX2[3] << <GND>
-HEX2[4] << <GND>
-HEX2[5] << <GND>
-HEX2[6] << <GND>
+HEX2[0] << bin7seghex:comb_40.port1
+HEX2[1] << bin7seghex:comb_40.port1
+HEX2[2] << bin7seghex:comb_40.port1
+HEX2[3] << bin7seghex:comb_40.port1
+HEX2[4] << bin7seghex:comb_40.port1
+HEX2[5] << bin7seghex:comb_40.port1
+HEX2[6] << bin7seghex:comb_40.port1
 HEX3[0] << <GND>
 HEX3[1] << <GND>
 HEX3[2] << <GND>
@@ -73,13 +73,13 @@ HEX5[5] << <GND>
 HEX5[6] << <GND>
 LEDR[0] << ant2IB.DB_MAX_OUTPUT_PORT_TYPE
 LEDR[1] << ant1IB.DB_MAX_OUTPUT_PORT_TYPE
-LEDR[2] << multCordicFunctTest7:m0.ycomp[8]
-LEDR[3] << multCordicFunctTest7:m0.ycomp[9]
-LEDR[4] << multCordicFunctTest7:m0.xcomp[8]
-LEDR[5] << multCordicFunctTest7:m0.xcomp[9]
-LEDR[6] << <GND>
-LEDR[7] << <GND>
-LEDR[8] << multCordicFunctTest7:m0.done
+LEDR[2] << <GND>
+LEDR[3] << <GND>
+LEDR[4] << antState[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[5] << antState[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[6] << antFSM:antFMSMain.TRight
+LEDR[7] << antFSM:antFMSMain.TLeft
+LEDR[8] << antFSM:antFMSMain.FW
 LEDR[9] << MapGenerator:mp.port17
 KEY[0] => KEY[0].IN2
 KEY[1] => ~NO_FANOUT~
@@ -2231,7 +2231,7 @@ Y[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 Y[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|FrameBufferDisplay7|antFSM:antFSMMain
+|FrameBufferDisplay7|antFSM:antFMSMain
 LAntenna => Decoder0.IN1
 LAntenna => pState.SE.DATAIN
 RAntenna => Decoder0.IN0
@@ -2240,6 +2240,22 @@ TLeft <= TLeft.DB_MAX_OUTPUT_PORT_TYPE
 TRight <= TRight.DB_MAX_OUTPUT_PORT_TYPE
 CLK => pState~1.DATAIN
 reset => pState~3.DATAIN
+antState[0] <= antState.DB_MAX_OUTPUT_PORT_TYPE
+antState[1] <= antState.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FrameBufferDisplay7|bin7seghex:comb_40
+I[0] => Decoder0.IN3
+I[1] => Decoder0.IN2
+I[2] => Decoder0.IN1
+I[3] => Decoder0.IN0
+OUT[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+OUT[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+OUT[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+OUT[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+OUT[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+OUT[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+OUT[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |FrameBufferDisplay7|multCordicFunctTest7:m0

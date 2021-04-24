@@ -2,18 +2,21 @@
 // 3/4/21
 // Christopher Ferguson
 
-module antFSM(LAntenna,RAntenna,FW,TLeft,TRight,CLK,reset);
+module antFSM(LAntenna,RAntenna,FW,TLeft,TRight,CLK,reset,antState);
 input CLK,LAntenna,RAntenna,reset;
 
-parameter SA = 0;
-parameter SB = 1;
-parameter SE = 2;
-parameter SLost = 3;
+parameter SA = 2'b00;
+parameter SB = 2'b01;
+parameter SE = 2'b10;
+parameter SLost = 2'b11;
 
 output reg FW,TLeft,TRight;
+output [1:0] antState;
+assign antState = pState;
 
 
-reg [1:0] pState = SLost, nState;
+//reg [1:0] pState = SLost, nState;
+reg [1:0] pState, nState;
 
 //Shift logic
 always@(posedge CLK or negedge reset)
@@ -30,10 +33,10 @@ always@(*)
 case(pState)
 SLost :	begin
 				case({LAntenna,RAntenna})
-				2'b00 : nState = SLost;
-				2'b01 : nState = SA;
-				2'b10 : nState = SE;
-				2'b11 : nState = SE;
+				2'b00 : nState <= SLost;
+				2'b01 : nState <= SA;
+				2'b10 : nState <= SE;
+				2'b11 : nState <= SE;
 				endcase
 				
 				FW = 1'b1;
@@ -42,10 +45,10 @@ SLost :	begin
 			end
 SA :	begin
 			case({LAntenna,RAntenna})
-			2'b00 : nState = SB;
-			2'b01 : nState = SA;
-			2'b10 : nState = SE;
-			2'b11 : nState = SE;
+			2'b00 : nState <= SB;
+			2'b01 : nState <= SA;
+			2'b10 : nState <= SE;
+			2'b11 : nState <= SE;
 			endcase
 			
 			FW = 1'b1;
@@ -54,10 +57,10 @@ SA :	begin
 		end
 SB :	begin
 			case({LAntenna,RAntenna})
-			2'b00 : nState = SB;
-			2'b01 : nState = SA;
-			2'b10 : nState = SE;
-			2'b11 : nState = SE;
+			2'b00 : nState <= SB;
+			2'b01 : nState <= SA;
+			2'b10 : nState <= SE;
+			2'b11 : nState <= SE;
 			endcase
 			
 			FW = 1'b1;
@@ -66,17 +69,17 @@ SB :	begin
 		end
 SE : 	begin
 			case({LAntenna,RAntenna})
-			2'b00 : nState = SB;
-			2'b01 : nState = SA;
-			2'b10 : nState = SE;
-			2'b11 : nState = SE;
+			2'b00 : nState <= SB;
+			2'b01 : nState <= SA;
+			2'b10 : nState <= SE;
+			2'b11 : nState <= SE;
 			endcase
 			
 			FW = 1'b0;
 			TLeft = 1'b1;
 			TRight = 1'b0;
 		end
-default : nState = SLost;
+default : nState <= SLost;
 endcase
 
 
