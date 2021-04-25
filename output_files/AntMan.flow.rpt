@@ -1,5 +1,5 @@
 Flow report for AntMan
-Mon Apr 19 14:26:02 2021
+Sat Apr 24 21:33:14 2021
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -41,16 +41,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Mon Apr 19 14:25:21 2021       ;
+; Flow Status                     ; Successful - Sat Apr 24 21:32:29 2021       ;
 ; Quartus Prime Version           ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                   ; AntMan                                      ;
 ; Top-level Entity Name           ; FrameBufferDisplay7                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 11,977 / 32,070 ( 37 % )                    ;
-; Total registers                 ; 14637                                       ;
-; Total pins                      ; 96 / 457 ( 21 % )                           ;
+; Logic utilization (in ALMs)     ; 11,843 / 32,070 ( 37 % )                    ;
+; Total registers                 ; 14583                                       ;
+; Total pins                      ; 44 / 457 ( 10 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/19/2021 14:20:17 ;
+; Start date & time ; 04/24/2021 21:25:46 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; AntMan              ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+-----------------------------------------------------------+---------------+---------------------+------------+
 ; Assignment Name                     ; Value                                                     ; Default Value ; Entity Name         ; Section Id ;
 +-------------------------------------+-----------------------------------------------------------+---------------+---------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 88623642282460.161885641714144                            ; --            ; --                  ; --         ;
+; COMPILER_SIGNATURE_ID               ; 88623642282460.161931394611604                            ; --            ; --                  ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                        ; --            ; --                  ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                         ; --            ; --                  ; --         ;
 ; MISC_FILE                           ; unnamed/synthesis/../unnamed.cmp                          ; --            ; --                  ; --         ;
@@ -107,11 +107,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:50     ; 1.8                     ; 5045 MB             ; 00:01:14                           ;
-; Fitter               ; 00:03:44     ; 1.4                     ; 6855 MB             ; 00:08:02                           ;
-; Assembler            ; 00:00:20     ; 1.0                     ; 5011 MB             ; 00:00:20                           ;
-; Timing Analyzer      ; 00:00:40     ; 2.9                     ; 5512 MB             ; 00:01:33                           ;
-; Total                ; 00:05:34     ; --                      ; --                  ; 00:11:09                           ;
+; Analysis & Synthesis ; 00:00:53     ; 1.5                     ; 5030 MB             ; 00:01:16                           ;
+; Fitter               ; 00:05:17     ; 1.4                     ; 6818 MB             ; 00:10:56                           ;
+; Assembler            ; 00:00:22     ; 1.0                     ; 5013 MB             ; 00:00:20                           ;
+; Timing Analyzer      ; 00:00:44     ; 2.8                     ; 5516 MB             ; 00:01:39                           ;
+; Total                ; 00:07:16     ; --                      ; --                  ; 00:14:11                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

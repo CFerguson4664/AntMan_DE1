@@ -1,39 +1,41 @@
-module MapGenerator(row,data,x,y,inBounds,HEX0,HEX1,ant1X,ant1Y,ant2X,ant2Y, ant1IB,ant2IB,map,reset,startX,startY,win);
+module MapGenerator(row,data,x,y,inBounds,ant1X,ant1Y,ant2X,ant2Y, ant1IB,ant2IB,map,reset,startX,startY,win);
 
 	input reset;
 	input[1:0] map;
 	input[8:0] row;
-	input[10:0] x,y;
-	output reg win = 1;
+	input[10:0] x,y,ant1X,ant1Y,ant2X,ant2Y;
 	
-	input[10:0] ant1X,ant1Y,ant2X,ant2Y;
+	output reg win = 1;
 	output reg[1695:0] data;
 	output reg inBounds,ant1IB,ant2IB;
-	output[6:0] HEX0,HEX1;
 	output reg[17:0] startX,startY;
 	
+	//Create the registers to store the map data
 	reg[13:0] map1[7:0];
 	reg[13:0] map2[7:0];
 	reg[13:0] map3[7:0];
 	reg[13:0] map4[7:0];
 	
+	
+	//Store the starting locations for each of the maps
 	reg[17:0] map1X = {11'd80,7'b0000000};
 	reg[17:0] map1Y = {11'd80,7'b0000000};
 	
 	reg[17:0] map2X = {11'd80,7'b0000000};
 	reg[17:0] map2Y = {11'd80,7'b0000000};
 	
-	reg[17:0] map3X = {11'd260,7'b0000000};
+	reg[17:0] map3X = {11'd280,7'b0000000};
 	reg[17:0] map3Y =	{11'd380,7'b0000000};
 	
 	reg[17:0] map4X = {11'd80,7'b0000000};
 	reg[17:0] map4Y = {11'd80,7'b0000000};
 	
-	
 	reg[1:0] mapA = 0;
 	
-	integer i;
+	
 	initial begin
+		//Initialize the data for each of the maps
+		//A '1' is a wall and a '0' is empty space
 		map1[0] = 14'b11111111111111;
 		map1[1] = 14'b10001000000001;
 		map1[2] = 14'b10111011111101;
@@ -71,14 +73,10 @@ module MapGenerator(row,data,x,y,inBounds,HEX0,HEX1,ant1X,ant1Y,ant2X,ant2Y, ant
 		map4[7] = 14'b11111111111101;
 	end
 	
-	reg[2:0] rowD;
-	
-	reg[3:0] XD,ant1XD,ant2XD;
-	reg[3:0] YD,ant1YD,ant2YD;
-	
-	SSHEX(XD,HEX1);
-	SSHEX(YD,HEX0);
-	
+	//Store the results of the upcoming divisions
+	reg[31:0] rowD;
+	reg[31:0] XD,ant1XD,ant2XD;
+	reg[31:0] YD,ant1YD,ant2YD;
 	
 	always@(negedge reset)
 	begin
@@ -87,6 +85,7 @@ module MapGenerator(row,data,x,y,inBounds,HEX0,HEX1,ant1X,ant1Y,ant2X,ant2Y, ant
 	
 	always@(*)
 	begin
+		//Figure out what square of the map each part of the ant is in
 		XD = x / 60;
 		YD = y / 60;
 		ant1XD = ant1X / 60;
@@ -94,12 +93,16 @@ module MapGenerator(row,data,x,y,inBounds,HEX0,HEX1,ant1X,ant1Y,ant2X,ant2Y, ant
 		ant2XD = ant2X / 60;
 		ant2YD = ant2Y / 60;
 		
+		//Detect if the ant has reached the end of the maze
 		if(reset == 1'b0) begin
 			win <= 1'b0;
 		end else if(YD == 4'b1000) begin
 			win <= 1'b1;
+		end else begin
+			win <= win;
 		end
 		
+		//Send the correct data for the map we are doing
 		case(mapA)
 		
 		2'b00 :	begin
@@ -192,6 +195,7 @@ module MapGenerator(row,data,x,y,inBounds,HEX0,HEX1,ant1X,ant1Y,ant2X,ant2Y, ant
 					end
 		endcase
 		
+		//Send the correct start locations for the map we are doing
 		case(map)
 		2'b00	:	begin
 						startX <= map1X;

@@ -212,27 +212,12 @@ set_location_assignment PIN_A11 -to VGA_CLK
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name QIP_FILE unnamed/synthesis/unnamed.qip
-set_global_assignment -name VERILOG_FILE topCordicFunctTest4.v
-set_global_assignment -name VERILOG_FILE multCordicFunctTest4.v
-set_global_assignment -name VERILOG_FILE bin7seghex.v
-set_global_assignment -name VERILOG_FILE mod10FSM.v
-set_global_assignment -name VERILOG_FILE mod5FSM.v
-set_global_assignment -name VERILOG_FILE mod2FSM.v
 set_global_assignment -name VERILOG_FILE SSHEX.v
-set_global_assignment -name VERILOG_FILE VSFSM.v
-set_global_assignment -name VERILOG_FILE HSFSM.v
 set_global_assignment -name VERILOG_FILE VCTRL.v
 set_global_assignment -name VERILOG_FILE HCTRL.v
-set_global_assignment -name VERILOG_FILE test2.v
-set_global_assignment -name VERILOG_FILE memoryController.v
 set_global_assignment -name QIP_FILE PLL.qip
 set_global_assignment -name SIP_FILE PLL.sip
-set_global_assignment -name VERILOG_FILE FrameBufferDisplay.v
-set_global_assignment -name VERILOG_FILE memTest.v
-set_global_assignment -name VERILOG_FILE memoryControllerTest.v
 set_global_assignment -name VERILOG_FILE MapGenerator.v
-set_global_assignment -name VERILOG_FILE multCordicFunctTest5.v
-set_global_assignment -name VERILOG_FILE multCordicFunctTest6.v
 set_location_assignment PIN_Y19 -to LEDR[6]
 set_location_assignment PIN_W19 -to LEDR[5]
 set_location_assignment PIN_W17 -to LEDR[4]

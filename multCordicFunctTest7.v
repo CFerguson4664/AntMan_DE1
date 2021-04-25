@@ -46,9 +46,6 @@ module multCordicFunctTest7(clk, reset, lineCount, theta_i, lineResult, done, an
 	// output: 10'b0_0_000000_00
 	wire [9:0] x_o, y_o;
 	
-//	reg [11:0] xInput [415:0];
-//	reg [11:0] yInput [415:0];
-	
 	reg [11:0] xInput [415:0];
 	reg [11:0] yInput [415:0];
 	
@@ -1363,10 +1360,10 @@ module multCordicFunctTest7(clk, reset, lineCount, theta_i, lineResult, done, an
 	
 	always @ (posedge clk)
 	begin
-		if (count > 416) begin // is this _really_ just greater than?
+		if (count >= 415) begin // is this _really_ just greater than?
 			count <= 0;
 		end
-		else count <= count + 1;
+		else count <= count + 10'd1;
 		
 		
 		if (reset == 1) begin
@@ -1440,14 +1437,14 @@ module multCordicFunctTest7(clk, reset, lineCount, theta_i, lineResult, done, an
 		if(countD > pipeOffset + 480) begin
 			done <= 1'b1;
 		end else begin
-			countD <= countD + 1;
+			countD <= countD + 10'd1;
 		end
 		
 		if (pipeCleanCount >= pipeOffset) begin
 			// set values
 			// y_o[7:2] is the 'whole number' part of the output
 			img_rotated[y_o[7:2]+y_offset][x_o[7:2]+x_offset] <= 1;
-			//img_rotated[y_offset][x_offset] <= 0;
+			img_rotated[y_offset][x_offset] <= 0;
 			
 			if(countD == pipeOffset + 1) begin
 				ant1X = x_o[7:2]+x_offset;
@@ -1465,13 +1462,11 @@ module multCordicFunctTest7(clk, reset, lineCount, theta_i, lineResult, done, an
 			end
 			
 		end else begin
-			pipeCleanCount <= pipeCleanCount + 1;
+			pipeCleanCount <= pipeCleanCount + 5'd1;
 		
 		end
 		
 		lineResult <= img_rotated[lineCount];
-//		h0 <= lineResult[3:0];
-//		h1 <= lineResult[5:4];
 		
 	end
 	

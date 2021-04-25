@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Mon Apr 19 14:21:09 2021
+Analysis & Synthesis Status : Successful - Sat Apr 24 21:26:41 2021
 Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 Revision Name : AntMan
 Top-level Entity Name : FrameBufferDisplay7
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 14551
-Total pins : 96
+Total registers : 14546
+Total pins : 44
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

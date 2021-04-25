@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA5F31) Path("D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/output_files/") File("Broken.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA5F31) Path("D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/output_files/") File("AntMan.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

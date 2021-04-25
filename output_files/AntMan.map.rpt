@@ -1,5 +1,5 @@
 Analysis & Synthesis report for AntMan
-Mon Apr 19 14:21:09 2021
+Sat Apr 24 21:26:42 2021
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -71,12 +71,12 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
  63. Parameter Settings for User Entity Instance: multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist7_lowRangeA_uid305_outXE_uid260_vecRotateTest_b_1
  64. Parameter Settings for User Entity Instance: multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist6_sR_uid318_outXE_uid260_vecRotateTest_b_1
  65. Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div1
- 66. Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div0
- 67. Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div5
- 68. Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div4
- 69. Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div3
- 70. Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div2
- 71. Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div6
+ 66. Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div6
+ 67. Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div3
+ 68. Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div2
+ 69. Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div5
+ 70. Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div4
+ 71. Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div0
  72. Port Connectivity Checks: "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist6_sR_uid318_outXE_uid260_vecRotateTest_b_1"
  73. Port Connectivity Checks: "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist7_lowRangeA_uid305_outXE_uid260_vecRotateTest_b_1"
  74. Port Connectivity Checks: "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist11_xip1_12_uid255_vecRotateTest_b_3"
@@ -122,8 +122,8 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 114. Port Connectivity Checks: "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist0_msbUAbsAE_uid12_vecRotateTest_merged_bit_select_b_1"
 115. Port Connectivity Checks: "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist1_msbUAbsAE_uid12_vecRotateTest_merged_bit_select_c_1"
 116. Port Connectivity Checks: "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist3_signA_uid7_vecRotateTest_merged_bit_select_c_1"
-117. Port Connectivity Checks: "VCTRL:CTRL1"
-118. Port Connectivity Checks: "PLL:p0"
+117. Port Connectivity Checks: "multCordicFunctTest7:m0"
+118. Port Connectivity Checks: "VCTRL:CTRL1"
 119. Post-Synthesis Netlist Statistics for Top Partition
 120. Elapsed Time Per Partition
 121. Analysis & Synthesis Messages
@@ -154,14 +154,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Apr 19 14:21:09 2021       ;
+; Analysis & Synthesis Status     ; Successful - Sat Apr 24 21:26:41 2021       ;
 ; Quartus Prime Version           ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                   ; AntMan                                      ;
 ; Top-level Entity Name           ; FrameBufferDisplay7                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 14551                                       ;
-; Total pins                      ; 96                                          ;
+; Total registers                 ; 14546                                       ;
+; Total pins                      ; 44                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -269,14 +269,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.78        ;
+; Average used               ; 1.50        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  32.3%      ;
-;     Processor 3            ;  32.3%      ;
-;     Processor 4            ;  13.8%      ;
+;     Processor 2            ;  18.4%      ;
+;     Processor 3            ;  18.3%      ;
+;     Processor 4            ;  12.9%      ;
 +----------------------------+-------------+
 
 
@@ -289,10 +289,8 @@ https://fpgasoftware.intel.com/eula.
 ; unnamed/synthesis/submodules/dspba_library_package.vhd ; yes             ; User VHDL File               ; D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/dspba_library_package.vhd ; unnamed ;
 ; unnamed/synthesis/submodules/dspba_library.vhd         ; yes             ; User VHDL File               ; D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/dspba_library.vhd         ; unnamed ;
 ; unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd      ; yes             ; User VHDL File               ; D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd      ; unnamed ;
-; SSHEX.v                                                ; yes             ; User Verilog HDL File        ; D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/SSHEX.v                                                ;         ;
 ; VCTRL.v                                                ; yes             ; User Verilog HDL File        ; D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/VCTRL.v                                                ;         ;
 ; HCTRL.v                                                ; yes             ; User Verilog HDL File        ; D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/HCTRL.v                                                ;         ;
-; memoryController.v                                     ; yes             ; User Verilog HDL File        ; D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/memoryController.v                                     ;         ;
 ; PLL.v                                                  ; yes             ; User Wizard-Generated File   ; D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/PLL.v                                                  ; PLL     ;
 ; PLL/PLL_0002.v                                         ; yes             ; User Verilog HDL File        ; D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/PLL/PLL_0002.v                                         ; PLL     ;
 ; MapGenerator.v                                         ; yes             ; User Verilog HDL File        ; D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v                                         ;         ;
@@ -318,18 +316,18 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------------------------------------------------------------+
 ; Resource                                    ; Usage                                                           ;
 +---------------------------------------------+-----------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 10468                                                           ;
+; Estimate of Logic utilization (ALMs needed) ; 10466                                                           ;
 ;                                             ;                                                                 ;
-; Combinational ALUT usage for logic          ; 14998                                                           ;
-;     -- 7 input functions                    ; 7                                                               ;
-;     -- 6 input functions                    ; 3634                                                            ;
-;     -- 5 input functions                    ; 1838                                                            ;
-;     -- 4 input functions                    ; 4236                                                            ;
-;     -- <=3 input functions                  ; 5283                                                            ;
+; Combinational ALUT usage for logic          ; 14983                                                           ;
+;     -- 7 input functions                    ; 12                                                              ;
+;     -- 6 input functions                    ; 3640                                                            ;
+;     -- 5 input functions                    ; 1953                                                            ;
+;     -- 4 input functions                    ; 4103                                                            ;
+;     -- <=3 input functions                  ; 5275                                                            ;
 ;                                             ;                                                                 ;
-; Dedicated logic registers                   ; 14551                                                           ;
+; Dedicated logic registers                   ; 14546                                                           ;
 ;                                             ;                                                                 ;
-; I/O pins                                    ; 96                                                              ;
+; I/O pins                                    ; 44                                                              ;
 ;                                             ;                                                                 ;
 ; Total DSP Blocks                            ; 0                                                               ;
 ;                                             ;                                                                 ;
@@ -337,9 +335,9 @@ https://fpgasoftware.intel.com/eula.
 ;     -- PLLs                                 ; 1                                                               ;
 ;                                             ;                                                                 ;
 ; Maximum fan-out node                        ; PLL:p0|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
-; Maximum fan-out                             ; 14551                                                           ;
-; Total fan-out                               ; 106469                                                          ;
-; Average fan-out                             ; 3.58                                                            ;
+; Maximum fan-out                             ; 14546                                                           ;
+; Total fan-out                               ; 106475                                                          ;
+; Average fan-out                             ; 3.59                                                            ;
 +---------------------------------------------+-----------------------------------------------------------------+
 
 
@@ -348,11 +346,9 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node                                                            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                       ; Entity Name          ; Library Name ;
 +---------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
-; |FrameBufferDisplay7                                                                  ; 14998 (8254)        ; 14551 (9912)              ; 0                 ; 0          ; 96   ; 0            ; |FrameBufferDisplay7                                                                                                                                      ; FrameBufferDisplay7  ; work         ;
-;    |HCTRL:CTRL0|                                                                      ; 14 (14)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|HCTRL:CTRL0                                                                                                                          ; HCTRL                ; work         ;
-;    |MapGenerator:mp|                                                                  ; 629 (45)            ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|MapGenerator:mp                                                                                                                      ; MapGenerator         ; work         ;
-;       |SSHEX:comb_3|                                                                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|MapGenerator:mp|SSHEX:comb_3                                                                                                         ; SSHEX                ; work         ;
-;       |SSHEX:comb_4|                                                                  ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|MapGenerator:mp|SSHEX:comb_4                                                                                                         ; SSHEX                ; work         ;
+; |FrameBufferDisplay7                                                                  ; 14983 (8254)        ; 14546 (9912)              ; 0                 ; 0          ; 44   ; 0            ; |FrameBufferDisplay7                                                                                                                                      ; FrameBufferDisplay7  ; work         ;
+;    |HCTRL:CTRL0|                                                                      ; 13 (13)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|HCTRL:CTRL0                                                                                                                          ; HCTRL                ; work         ;
+;    |MapGenerator:mp|                                                                  ; 620 (50)            ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|MapGenerator:mp                                                                                                                      ; MapGenerator         ; work         ;
 ;       |lpm_divide:Div0|                                                               ; 86 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|MapGenerator:mp|lpm_divide:Div0                                                                                                      ; lpm_divide           ; work         ;
 ;          |lpm_divide_hbm:auto_generated|                                              ; 86 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|MapGenerator:mp|lpm_divide:Div0|lpm_divide_hbm:auto_generated                                                                        ; lpm_divide_hbm       ; work         ;
 ;             |sign_div_unsign_nlh:divider|                                             ; 86 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|MapGenerator:mp|lpm_divide:Div0|lpm_divide_hbm:auto_generated|sign_div_unsign_nlh:divider                                            ; sign_div_unsign_nlh  ; work         ;
@@ -386,9 +382,9 @@ https://fpgasoftware.intel.com/eula.
 ;          |altera_pll:altera_pll_i|                                                    ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|PLL:p0|PLL_0002:pll_inst|altera_pll:altera_pll_i                                                                                     ; altera_pll           ; work         ;
 ;    |VCTRL:CTRL1|                                                                      ; 13 (13)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|VCTRL:CTRL1                                                                                                                          ; VCTRL                ; work         ;
 ;    |antFSM:antFSMMain|                                                                ; 2 (2)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|antFSM:antFSMMain                                                                                                                    ; antFSM               ; work         ;
-;    |multCordicFunctTest7:m0|                                                          ; 6086 (4581)         ; 4613 (3376)               ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|multCordicFunctTest7:m0                                                                                                              ; multCordicFunctTest7 ; work         ;
-;       |unnamed:c0|                                                                    ; 1505 (0)            ; 1237 (0)                  ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0                                                                                                   ; unnamed              ; unnamed      ;
-;          |unnamed_CORDIC_0:cordic_0|                                                  ; 1505 (1495)         ; 1237 (351)                ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0                                                                         ; unnamed_CORDIC_0     ; unnamed      ;
+;    |multCordicFunctTest7:m0|                                                          ; 6081 (4578)         ; 4608 (3373)               ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|multCordicFunctTest7:m0                                                                                                              ; multCordicFunctTest7 ; work         ;
+;       |unnamed:c0|                                                                    ; 1503 (0)            ; 1235 (0)                  ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0                                                                                                   ; unnamed              ; unnamed      ;
+;          |unnamed_CORDIC_0:cordic_0|                                                  ; 1503 (1493)         ; 1235 (351)                ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0                                                                         ; unnamed_CORDIC_0     ; unnamed      ;
 ;             |dspba_delay:redist0_msbUAbsAE_uid12_vecRotateTest_merged_bit_select_b_1| ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist0_msbUAbsAE_uid12_vecRotateTest_merged_bit_select_b_1 ; dspba_delay          ; unnamed      ;
 ;             |dspba_delay:redist10_xip1_12_uid255_vecRotateTest_b_1|                   ; 0 (0)               ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist10_xip1_12_uid255_vecRotateTest_b_1                   ; dspba_delay          ; unnamed      ;
 ;             |dspba_delay:redist11_xip1_12_uid255_vecRotateTest_b_3|                   ; 0 (0)               ; 45 (45)                   ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist11_xip1_12_uid255_vecRotateTest_b_3                   ; dspba_delay          ; unnamed      ;
@@ -428,9 +424,9 @@ https://fpgasoftware.intel.com/eula.
 ;             |dspba_delay:redist42_aip1E_uid51_vecRotateTest_b_1|                      ; 1 (1)               ; 15 (15)                   ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist42_aip1E_uid51_vecRotateTest_b_1                      ; dspba_delay          ; unnamed      ;
 ;             |dspba_delay:redist43_xIn_x_1|                                            ; 1 (1)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist43_xIn_x_1                                            ; dspba_delay          ; unnamed      ;
 ;             |dspba_delay:redist44_xIn_y_1|                                            ; 1 (1)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist44_xIn_y_1                                            ; dspba_delay          ; unnamed      ;
-;             |dspba_delay:redist4_sR_uid373_outYE_uid262_vecRotateTest_b_1|            ; 0 (0)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist4_sR_uid373_outYE_uid262_vecRotateTest_b_1            ; dspba_delay          ; unnamed      ;
+;             |dspba_delay:redist4_sR_uid373_outYE_uid262_vecRotateTest_b_1|            ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist4_sR_uid373_outYE_uid262_vecRotateTest_b_1            ; dspba_delay          ; unnamed      ;
 ;             |dspba_delay:redist5_lowRangeA_uid360_outYE_uid262_vecRotateTest_b_1|     ; 0 (0)               ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist5_lowRangeA_uid360_outYE_uid262_vecRotateTest_b_1     ; dspba_delay          ; unnamed      ;
-;             |dspba_delay:redist6_sR_uid318_outXE_uid260_vecRotateTest_b_1|            ; 0 (0)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist6_sR_uid318_outXE_uid260_vecRotateTest_b_1            ; dspba_delay          ; unnamed      ;
+;             |dspba_delay:redist6_sR_uid318_outXE_uid260_vecRotateTest_b_1|            ; 0 (0)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist6_sR_uid318_outXE_uid260_vecRotateTest_b_1            ; dspba_delay          ; unnamed      ;
 ;             |dspba_delay:redist7_lowRangeA_uid305_outXE_uid260_vecRotateTest_b_1|     ; 0 (0)               ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist7_lowRangeA_uid305_outXE_uid260_vecRotateTest_b_1     ; dspba_delay          ; unnamed      ;
 ;             |dspba_delay:redist8_yip1_12_uid256_vecRotateTest_b_1|                    ; 0 (0)               ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist8_yip1_12_uid256_vecRotateTest_b_1                    ; dspba_delay          ; unnamed      ;
 ;             |dspba_delay:redist9_yip1_12_uid256_vecRotateTest_b_3|                    ; 0 (0)               ; 45 (45)                   ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist9_yip1_12_uid256_vecRotateTest_b_3                    ; dspba_delay          ; unnamed      ;
@@ -750,6 +746,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; mapData2[0][13]                                                                                                                                          ; Stuck at VCC due to stuck port data_in                                                                                                                               ;
 ; mapData2[0][11]                                                                                                                                          ; Stuck at VCC due to stuck port data_in                                                                                                                               ;
 ; mapData2[0][9]                                                                                                                                           ; Stuck at VCC due to stuck port data_in                                                                                                                               ;
+; multCordicFunctTest7:m0|img_rotated[29][27]                                                                                                              ; Stuck at GND due to stuck port data_in                                                                                                                               ;
 ; multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|outYE_uid262_vecRotateTest_sub_3_o[0]                                                       ; Merged with multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|outYE_uid262_vecRotateTest_add_1_o[0]                                                       ;
 ; multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist9_yip1_12_uid256_vecRotateTest_b_3|delay_signals[0][0]                    ; Merged with multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|outYE_uid262_vecRotateTest_sub_5_o[0]                                                       ;
 ; multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|outXE_uid260_vecRotateTest_sub_3_o[0]                                                       ; Merged with multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|outXE_uid260_vecRotateTest_add_1_o[0]                                                       ;
@@ -774,7 +771,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; antFSM:antFSMMain|pState.SA                                                                                                                              ; Lost fanout                                                                                                                                                          ;
 ; antFSM:antFSMMain|pState~4                                                                                                                               ; Lost fanout                                                                                                                                                          ;
 ; antFSM:antFSMMain|pState~5                                                                                                                               ; Lost fanout                                                                                                                                                          ;
-; Total Number of Removed Registers = 317                                                                                                                  ;                                                                                                                                                                      ;
+; Total Number of Removed Registers = 318                                                                                                                  ;                                                                                                                                                                      ;
 +----------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -817,12 +814,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 14551 ;
+; Total registers                              ; 14546 ;
 ; Number of registers using Synchronous Clear  ; 1524  ;
 ; Number of registers using Synchronous Load   ; 2002  ;
-; Number of registers using Asynchronous Clear ; 1334  ;
+; Number of registers using Asynchronous Clear ; 1332  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 8292  ;
+; Number of registers using Clock Enable       ; 8290  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -833,10 +830,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
 ; imgActY[13]                            ; 9       ;
-; imgOldActY[13]                         ; 1       ;
 ; imgActY[11]                            ; 12      ;
+; imgActX[11]                            ; 12      ;
+; imgOldActY[13]                         ; 1       ;
 ; imgOldActY[11]                         ; 1       ;
-; Total number of inverted registers = 4 ;         ;
+; imgOldActX[11]                         ; 1       ;
+; Total number of inverted registers = 6 ;         ;
 +----------------------------------------+---------+
 
 
@@ -848,20 +847,20 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; 57:1               ; 57 bits   ; 2166 LEs      ; 2166 LEs             ; 0 LEs                  ; Yes        ; |FrameBufferDisplay7|multCordicFunctTest7:m0|lineResult[56]                                                      ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |FrameBufferDisplay7|MapGenerator:mp|Mux213                                                                      ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |FrameBufferDisplay7|MapGenerator:mp|Mux93                                                                       ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |FrameBufferDisplay7|multCordicFunctTest7:m0|countD[1]                                                           ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |FrameBufferDisplay7|multCordicFunctTest7:m0|countD[5]                                                           ;
 ; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |FrameBufferDisplay7|multCordicFunctTest7:m0|pipeCleanCount[1]                                                   ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |FrameBufferDisplay7|VCTRL:CTRL1|CNT[1]                                                                          ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |FrameBufferDisplay7|multCordicFunctTest7:m0|ycomp[0]                                                            ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |FrameBufferDisplay7|multCordicFunctTest7:m0|xcomp[0]                                                            ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |FrameBufferDisplay7|VPixel[8]                                                                                   ;
-; 3:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |FrameBufferDisplay7|imgActY[2]                                                                                  ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |FrameBufferDisplay7|multCordicFunctTest7:m0|ycomp[1]                                                            ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |FrameBufferDisplay7|multCordicFunctTest7:m0|xcomp[9]                                                            ;
+; 3:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |FrameBufferDisplay7|imgActX[9]                                                                                  ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |FrameBufferDisplay7|VPixel[5]                                                                                   ;
 ; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |FrameBufferDisplay7|HPixel[4]                                                                                   ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |FrameBufferDisplay7|angle[13]                                                                                   ;
-; 5:1                ; 15 bits   ; 45 LEs        ; 30 LEs               ; 15 LEs                 ; Yes        ; |FrameBufferDisplay7|angle[11]                                                                                   ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |FrameBufferDisplay7|imgActX[9]                                                                                  ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |FrameBufferDisplay7|angle[14]                                                                                   ;
+; 6:1                ; 15 bits   ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; Yes        ; |FrameBufferDisplay7|angle[6]                                                                                    ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |FrameBufferDisplay7|imgActX[10]                                                                                 ;
 ; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|Mux31                          ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|Mux41                          ;
-; 1024:1             ; 2 bits    ; 1364 LEs      ; 1134 LEs             ; 230 LEs                ; No         ; |FrameBufferDisplay7|Mux0                                                                                        ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|Mux36                          ;
+; 1024:1             ; 2 bits    ; 1364 LEs      ; 1134 LEs             ; 230 LEs                ; No         ; |FrameBufferDisplay7|Mux1                                                                                        ;
 ; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|absX_uid33_vecRotateTest_q[11] ;
 ; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|absY_uid34_vecRotateTest_q[8]  ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |FrameBufferDisplay7|multCordicFunctTest7:m0|count[7]                                                            ;
@@ -1773,7 +1772,53 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div0 ;
+; Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div6 ;
++------------------------+----------------+----------------------------------------+
+; Parameter Name         ; Value          ; Type                                   ;
++------------------------+----------------+----------------------------------------+
+; LPM_WIDTHN             ; 9              ; Untyped                                ;
+; LPM_WIDTHD             ; 6              ; Untyped                                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
+; CBXI_PARAMETER         ; lpm_divide_8am ; Untyped                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                         ;
++------------------------+----------------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div3 ;
++------------------------+----------------+----------------------------------------+
+; Parameter Name         ; Value          ; Type                                   ;
++------------------------+----------------+----------------------------------------+
+; LPM_WIDTHN             ; 11             ; Untyped                                ;
+; LPM_WIDTHD             ; 6              ; Untyped                                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
+; CBXI_PARAMETER         ; lpm_divide_hbm ; Untyped                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                         ;
++------------------------+----------------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div2 ;
 +------------------------+----------------+----------------------------------------+
 ; Parameter Name         ; Value          ; Type                                   ;
 +------------------------+----------------+----------------------------------------+
@@ -1842,7 +1887,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div3 ;
+; Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div0 ;
 +------------------------+----------------+----------------------------------------+
 ; Parameter Name         ; Value          ; Type                                   ;
 +------------------------+----------------+----------------------------------------+
@@ -1854,52 +1899,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
 ; CBXI_PARAMETER         ; lpm_divide_hbm ; Untyped                                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                         ;
-+------------------------+----------------+----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div2 ;
-+------------------------+----------------+----------------------------------------+
-; Parameter Name         ; Value          ; Type                                   ;
-+------------------------+----------------+----------------------------------------+
-; LPM_WIDTHN             ; 11             ; Untyped                                ;
-; LPM_WIDTHD             ; 6              ; Untyped                                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
-; LPM_PIPELINE           ; 0              ; Untyped                                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
-; CBXI_PARAMETER         ; lpm_divide_hbm ; Untyped                                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                         ;
-+------------------------+----------------+----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div6 ;
-+------------------------+----------------+----------------------------------------+
-; Parameter Name         ; Value          ; Type                                   ;
-+------------------------+----------------+----------------------------------------+
-; LPM_WIDTHN             ; 9              ; Untyped                                ;
-; LPM_WIDTHD             ; 6              ; Untyped                                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
-; LPM_PIPELINE           ; 0              ; Untyped                                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
-; CBXI_PARAMETER         ; lpm_divide_8am ; Untyped                                ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
@@ -2318,6 +2317,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------+
 
 
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "multCordicFunctTest7:m0"                                                                ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; xcomp[8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ycomp[8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "VCTRL:CTRL1"                                                                                                            ;
 +------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
@@ -2327,32 +2336,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------+
-; Port Connectivity Checks: "PLL:p0"     ;
-+------+-------+----------+--------------+
-; Port ; Type  ; Severity ; Details      ;
-+------+-------+----------+--------------+
-; rst  ; Input ; Info     ; Stuck at GND ;
-+------+-------+----------+--------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 14551                       ;
-;     CLR               ; 959                         ;
+; arriav_ff             ; 14546                       ;
+;     CLR               ; 957                         ;
 ;     CLR SLD           ; 288                         ;
-;     ENA               ; 5029                        ;
+;     ENA               ; 5027                        ;
 ;     ENA CLR           ; 46                          ;
 ;     ENA CLR SCLR      ; 15                          ;
 ;     ENA CLR SLD       ; 26                          ;
 ;     ENA SCLR          ; 1488                        ;
 ;     ENA SLD           ; 1688                        ;
 ;     SCLR              ; 21                          ;
-;     plain             ; 4991                        ;
-; arriav_lcell_comb     ; 15000                       ;
+;     plain             ; 4990                        ;
+; arriav_lcell_comb     ; 14983                       ;
 ;     arith             ; 1811                        ;
 ;         0 data inputs ; 72                          ;
 ;         1 data inputs ; 494                         ;
@@ -2360,21 +2360,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         3 data inputs ; 441                         ;
 ;         4 data inputs ; 72                          ;
 ;         5 data inputs ; 4                           ;
-;     extend            ; 7                           ;
-;         7 data inputs ; 7                           ;
-;     normal            ; 12932                       ;
+;     extend            ; 12                          ;
+;         7 data inputs ; 12                          ;
+;     normal            ; 12910                       ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 18                          ;
-;         2 data inputs ; 1001                        ;
-;         3 data inputs ; 2280                        ;
-;         4 data inputs ; 4164                        ;
-;         5 data inputs ; 1834                        ;
-;         6 data inputs ; 3634                        ;
+;         1 data inputs ; 16                          ;
+;         2 data inputs ; 997                         ;
+;         3 data inputs ; 2276                        ;
+;         4 data inputs ; 4031                        ;
+;         5 data inputs ; 1949                        ;
+;         6 data inputs ; 3640                        ;
 ;     shared            ; 250                         ;
 ;         0 data inputs ; 11                          ;
 ;         1 data inputs ; 218                         ;
 ;         2 data inputs ; 21                          ;
-; boundary_port         ; 96                          ;
+; boundary_port         ; 44                          ;
 ; generic_pll           ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 18.40                       ;
@@ -2397,7 +2397,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Mon Apr 19 14:20:16 2021
+    Info: Processing started: Sat Apr 24 21:25:46 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AntMan -c AntMan
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -2415,93 +2415,26 @@ Info (12021): Found 6 design units, including 3 entities, in source file unnamed
 Info (12021): Found 2 design units, including 1 entities, in source file unnamed/synthesis/submodules/unnamed_cordic_0.vhd
     Info (12022): Found design unit 1: unnamed_CORDIC_0-normal File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 48
     Info (12023): Found entity 1: unnamed_CORDIC_0 File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 36
-Warning (10261): Verilog HDL Event Control warning at topCordicFunctTest4.v(22): Event Control contains a complex event expression File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/topCordicFunctTest4.v Line: 22
-Info (12021): Found 1 design units, including 1 entities, in source file topcordicfuncttest4.v
-    Info (12023): Found entity 1: topCordicFunctTest4 File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/topCordicFunctTest4.v Line: 2
-Info (12021): Found 1 design units, including 1 entities, in source file multcordicfuncttest4.v
-    Info (12023): Found entity 1: multCordicFunctTest4 File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/multCordicFunctTest4.v Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file bin7seghex.v
-    Info (12023): Found entity 1: bin7seghex File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/bin7seghex.v Line: 5
-Info (12021): Found 1 design units, including 1 entities, in source file mod10fsm.v
-    Info (12023): Found entity 1: mod10FSM File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/mod10FSM.v Line: 5
-Info (12021): Found 1 design units, including 1 entities, in source file mod5fsm.v
-    Info (12023): Found entity 1: mod5FSM File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/mod5FSM.v Line: 5
-Info (12021): Found 1 design units, including 1 entities, in source file mod2fsm.v
-    Info (12023): Found entity 1: mod2FSM File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/mod2FSM.v Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file sshex.v
     Info (12023): Found entity 1: SSHEX File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/SSHEX.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file vsfsm.v
-    Info (12023): Found entity 1: VSFSM File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/VSFSM.v Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file hsfsm.v
-    Info (12023): Found entity 1: HSFSM File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/HSFSM.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file vctrl.v
     Info (12023): Found entity 1: VCTRL File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/VCTRL.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file hctrl.v
     Info (12023): Found entity 1: HCTRL File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/HCTRL.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file test2.v
-    Info (12023): Found entity 1: test2 File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/test2.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file memorycontroller.v
-    Info (12023): Found entity 1: memoryController File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/memoryController.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pll.v
     Info (12023): Found entity 1: PLL File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/PLL.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file pll/pll_0002.v
     Info (12023): Found entity 1: PLL_0002 File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/PLL/PLL_0002.v Line: 2
-Warning (10238): Verilog Module Declaration warning at FrameBufferDisplay.v(21): ignored anonymous port(s) indicated by duplicate or dangling comma(s) in the port list for module "FrameBufferDisplay" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay.v Line: 21
-Info (12021): Found 1 design units, including 1 entities, in source file framebufferdisplay.v
-    Info (12023): Found entity 1: FrameBufferDisplay File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay.v Line: 1
-Warning (10261): Verilog HDL Event Control warning at memTest.v(85): Event Control contains a complex event expression File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/memTest.v Line: 85
-Info (12021): Found 1 design units, including 1 entities, in source file memtest.v
-    Info (12023): Found entity 1: memTest File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/memTest.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file memorycontrollertest.v
-    Info (12023): Found entity 1: memoryControllerTest File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/memoryControllerTest.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mapgenerator.v
     Info (12023): Found entity 1: MapGenerator File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file multcordicfuncttest5.v
-    Info (12023): Found entity 1: multCordicFunctTest5 File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/multCordicFunctTest5.v Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file multcordicfuncttest6.v
-    Info (12023): Found entity 1: multCordicFunctTest6 File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/multCordicFunctTest6.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file multcordicfuncttest7.v
     Info (12023): Found entity 1: multCordicFunctTest7 File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/multCordicFunctTest7.v Line: 3
-Warning (10238): Verilog Module Declaration warning at FrameBufferDisplay7.v(21): ignored anonymous port(s) indicated by duplicate or dangling comma(s) in the port list for module "FrameBufferDisplay7" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file framebufferdisplay7.v
     Info (12023): Found entity 1: FrameBufferDisplay7 File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file antfsm.v
     Info (12023): Found entity 1: antFSM File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/antFSM.v Line: 5
-Critical Warning (10846): Verilog HDL Instantiation warning at memoryController.v(72): instance has no name File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/memoryController.v Line: 72
-Critical Warning (10846): Verilog HDL Instantiation warning at memoryController.v(73): instance has no name File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/memoryController.v Line: 73
-Critical Warning (10846): Verilog HDL Instantiation warning at memoryController.v(74): instance has no name File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/memoryController.v Line: 74
-Critical Warning (10846): Verilog HDL Instantiation warning at memoryController.v(75): instance has no name File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/memoryController.v Line: 75
-Critical Warning (10846): Verilog HDL Instantiation warning at MapGenerator.v(79): instance has no name File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 79
-Critical Warning (10846): Verilog HDL Instantiation warning at MapGenerator.v(80): instance has no name File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 80
-Critical Warning (10846): Verilog HDL Instantiation warning at memTest.v(78): instance has no name File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/memTest.v Line: 78
-Critical Warning (10846): Verilog HDL Instantiation warning at memTest.v(79): instance has no name File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/memTest.v Line: 79
-Critical Warning (10846): Verilog HDL Instantiation warning at memTest.v(81): instance has no name File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/memTest.v Line: 81
-Critical Warning (10846): Verilog HDL Instantiation warning at memoryControllerTest.v(85): instance has no name File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/memoryControllerTest.v Line: 85
-Critical Warning (10846): Verilog HDL Instantiation warning at memoryControllerTest.v(87): instance has no name File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/memoryControllerTest.v Line: 87
-Critical Warning (10846): Verilog HDL Instantiation warning at memoryControllerTest.v(88): instance has no name File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/memoryControllerTest.v Line: 88
 Info (12127): Elaborating entity "FrameBufferDisplay7" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at FrameBufferDisplay7.v(95): object "test" assigned a value but never read File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 95
-Warning (10230): Verilog HDL assignment warning at FrameBufferDisplay7.v(120): truncated value with size 32 to match size of target (11) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 120
-Warning (10230): Verilog HDL assignment warning at FrameBufferDisplay7.v(121): truncated value with size 32 to match size of target (11) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 121
-Warning (10230): Verilog HDL assignment warning at FrameBufferDisplay7.v(123): truncated value with size 32 to match size of target (11) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 123
-Warning (10230): Verilog HDL assignment warning at FrameBufferDisplay7.v(124): truncated value with size 32 to match size of target (11) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 124
-Warning (10230): Verilog HDL assignment warning at FrameBufferDisplay7.v(152): truncated value with size 32 to match size of target (11) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 152
-Warning (10230): Verilog HDL assignment warning at FrameBufferDisplay7.v(171): truncated value with size 32 to match size of target (18) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 171
-Warning (10230): Verilog HDL assignment warning at FrameBufferDisplay7.v(177): truncated value with size 32 to match size of target (18) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 177
-Warning (10230): Verilog HDL assignment warning at FrameBufferDisplay7.v(207): truncated value with size 32 to match size of target (9) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 207
-Warning (10230): Verilog HDL assignment warning at FrameBufferDisplay7.v(237): truncated value with size 32 to match size of target (3) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 237
-Warning (10230): Verilog HDL assignment warning at FrameBufferDisplay7.v(241): truncated value with size 32 to match size of target (3) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 241
-Warning (10230): Verilog HDL assignment warning at FrameBufferDisplay7.v(254): truncated value with size 32 to match size of target (10) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 254
-Warning (10230): Verilog HDL assignment warning at FrameBufferDisplay7.v(263): truncated value with size 32 to match size of target (22) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 263
-Warning (10230): Verilog HDL assignment warning at FrameBufferDisplay7.v(267): truncated value with size 32 to match size of target (22) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 267
-Warning (10230): Verilog HDL assignment warning at FrameBufferDisplay7.v(270): truncated value with size 32 to match size of target (22) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 270
-Warning (10230): Verilog HDL assignment warning at FrameBufferDisplay7.v(272): truncated value with size 32 to match size of target (22) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 272
-Warning (10034): Output port "HEX2" at FrameBufferDisplay7.v(23) has no driver File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-Warning (10034): Output port "HEX3" at FrameBufferDisplay7.v(23) has no driver File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-Warning (10034): Output port "HEX4" at FrameBufferDisplay7.v(23) has no driver File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-Warning (10034): Output port "HEX5" at FrameBufferDisplay7.v(23) has no driver File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-Warning (10034): Output port "LEDR[7..6]" at FrameBufferDisplay7.v(24) has no driver File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 24
-Info (12128): Elaborating entity "PLL" for hierarchy "PLL:p0" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 38
+Info (12128): Elaborating entity "PLL" for hierarchy "PLL:p0" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 96
 Info (12128): Elaborating entity "PLL_0002" for hierarchy "PLL:p0|PLL_0002:pll_inst" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/PLL.v Line: 19
 Info (12128): Elaborating entity "altera_pll" for hierarchy "PLL:p0|PLL_0002:pll_inst|altera_pll:altera_pll_i" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/PLL/PLL_0002.v Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
@@ -2567,30 +2500,14 @@ Info (12133): Instantiated megafunction "PLL:p0|PLL_0002:pll_inst|altera_pll:alt
     Info (12134): Parameter "duty_cycle17" = "50"
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
-Info (12128): Elaborating entity "HCTRL" for hierarchy "HCTRL:CTRL0" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 43
-Warning (10230): Verilog HDL assignment warning at HCTRL.v(16): truncated value with size 32 to match size of target (11) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/HCTRL.v Line: 16
-Info (12128): Elaborating entity "VCTRL" for hierarchy "VCTRL:CTRL1" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 46
-Warning (10230): Verilog HDL assignment warning at VCTRL.v(19): truncated value with size 32 to match size of target (10) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/VCTRL.v Line: 19
-Info (12128): Elaborating entity "MapGenerator" for hierarchy "MapGenerator:mp" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 73
-Warning (10230): Verilog HDL assignment warning at MapGenerator.v(90): truncated value with size 32 to match size of target (4) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 90
-Warning (10230): Verilog HDL assignment warning at MapGenerator.v(91): truncated value with size 32 to match size of target (4) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 91
-Warning (10230): Verilog HDL assignment warning at MapGenerator.v(92): truncated value with size 32 to match size of target (4) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 92
-Warning (10230): Verilog HDL assignment warning at MapGenerator.v(93): truncated value with size 32 to match size of target (4) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 93
-Warning (10230): Verilog HDL assignment warning at MapGenerator.v(94): truncated value with size 32 to match size of target (4) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 94
-Warning (10230): Verilog HDL assignment warning at MapGenerator.v(95): truncated value with size 32 to match size of target (4) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 95
-Warning (10230): Verilog HDL assignment warning at MapGenerator.v(111): truncated value with size 32 to match size of target (3) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 111
-Warning (10230): Verilog HDL assignment warning at MapGenerator.v(133): truncated value with size 32 to match size of target (3) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 133
-Warning (10230): Verilog HDL assignment warning at MapGenerator.v(155): truncated value with size 32 to match size of target (3) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 155
-Warning (10230): Verilog HDL assignment warning at MapGenerator.v(177): truncated value with size 32 to match size of target (3) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 177
-Warning (10240): Verilog HDL Always Construct warning at MapGenerator.v(90): inferring latch(es) for variable "win", which holds its previous value in one or more paths through the always construct File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 90
-Info (10041): Inferred latch for "win" at MapGenerator.v(90) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 90
-Info (12128): Elaborating entity "SSHEX" for hierarchy "MapGenerator:mp|SSHEX:comb_3" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 79
-Info (12128): Elaborating entity "antFSM" for hierarchy "antFSM:antFSMMain" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 76
-Info (12128): Elaborating entity "multCordicFunctTest7" for hierarchy "multCordicFunctTest7:m0" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 116
-Warning (10230): Verilog HDL assignment warning at multCordicFunctTest7.v(1369): truncated value with size 32 to match size of target (10) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/multCordicFunctTest7.v Line: 1369
-Warning (10230): Verilog HDL assignment warning at multCordicFunctTest7.v(1443): truncated value with size 32 to match size of target (10) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/multCordicFunctTest7.v Line: 1443
-Warning (10230): Verilog HDL assignment warning at multCordicFunctTest7.v(1468): truncated value with size 32 to match size of target (5) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/multCordicFunctTest7.v Line: 1468
-Info (12128): Elaborating entity "unnamed" for hierarchy "multCordicFunctTest7:m0|unnamed:c0" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/multCordicFunctTest7.v Line: 1478
+Info (12128): Elaborating entity "HCTRL" for hierarchy "HCTRL:CTRL0" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 102
+Info (12128): Elaborating entity "VCTRL" for hierarchy "VCTRL:CTRL1" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 105
+Info (12128): Elaborating entity "MapGenerator" for hierarchy "MapGenerator:mp" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 127
+Warning (10240): Verilog HDL Always Construct warning at MapGenerator.v(89): inferring latch(es) for variable "win", which holds its previous value in one or more paths through the always construct File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 89
+Info (10041): Inferred latch for "win" at MapGenerator.v(89) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 89
+Info (12128): Elaborating entity "antFSM" for hierarchy "antFSM:antFSMMain" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 130
+Info (12128): Elaborating entity "multCordicFunctTest7" for hierarchy "multCordicFunctTest7:m0" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 148
+Info (12128): Elaborating entity "unnamed" for hierarchy "multCordicFunctTest7:m0|unnamed:c0" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/multCordicFunctTest7.v Line: 1473
 Info (12128): Elaborating entity "unnamed_CORDIC_0" for hierarchy "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/unnamed.v Line: 24
 Info (12128): Elaborating entity "dspba_delay" for hierarchy "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist3_signA_uid7_vecRotateTest_merged_bit_select_c_1" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 609
 Info (12128): Elaborating entity "dspba_delay" for hierarchy "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist1_msbUAbsAE_uid12_vecRotateTest_merged_bit_select_c_1" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 644
@@ -2604,7 +2521,7 @@ Info (12128): Elaborating entity "dspba_delay" for hierarchy "multCordicFunctTes
 Info (12128): Elaborating entity "dspba_delay" for hierarchy "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist5_lowRangeA_uid360_outYE_uid262_vecRotateTest_b_1" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 1837
 Info (12128): Elaborating entity "dspba_delay" for hierarchy "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist4_sR_uid373_outYE_uid262_vecRotateTest_b_1" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 1849
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "ant" is uninferred due to asynchronous read logic File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 93
+    Info (276007): RAM logic "ant" is uninferred due to asynchronous read logic File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 80
 Warning (20013): Ignored 70 assignments for entity "DE1_SOC" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK2_50 -entity DE1_SOC was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK3_50 -entity DE1_SOC was ignored
@@ -2890,15 +2807,15 @@ Warning (20013): Ignored 70 assignments for entity "DE1_SOC" -- entity does not 
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[8] -entity DE1_SOC was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[9] -entity DE1_SOC was ignored
 Info (278001): Inferred 7 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MapGenerator:mp|Div1" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 91
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MapGenerator:mp|Div0" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 90
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MapGenerator:mp|Div5" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 95
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MapGenerator:mp|Div4" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 94
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MapGenerator:mp|Div3" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 93
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MapGenerator:mp|Div2" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 92
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MapGenerator:mp|Div6" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 155
-Info (12130): Elaborated megafunction instantiation "MapGenerator:mp|lpm_divide:Div1" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 91
-Info (12133): Instantiated megafunction "MapGenerator:mp|lpm_divide:Div1" with the following parameter: File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 91
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MapGenerator:mp|Div1" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 90
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MapGenerator:mp|Div6" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 158
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MapGenerator:mp|Div3" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 92
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MapGenerator:mp|Div2" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 91
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MapGenerator:mp|Div5" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 94
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MapGenerator:mp|Div4" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 93
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MapGenerator:mp|Div0" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 89
+Info (12130): Elaborated megafunction instantiation "MapGenerator:mp|lpm_divide:Div1" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 90
+Info (12133): Instantiated megafunction "MapGenerator:mp|lpm_divide:Div1" with the following parameter: File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 90
     Info (12134): Parameter "LPM_WIDTHN" = "11"
     Info (12134): Parameter "LPM_WIDTHD" = "6"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -2909,14 +2826,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_nlh File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/db/sign_div_unsign_nlh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kve.tdf
     Info (12023): Found entity 1: alt_u_div_kve File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/db/alt_u_div_kve.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "MapGenerator:mp|lpm_divide:Div5" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 95
-Info (12133): Instantiated megafunction "MapGenerator:mp|lpm_divide:Div5" with the following parameter: File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 95
-    Info (12134): Parameter "LPM_WIDTHN" = "11"
-    Info (12134): Parameter "LPM_WIDTHD" = "6"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12130): Elaborated megafunction instantiation "MapGenerator:mp|lpm_divide:Div6" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 155
-Info (12133): Instantiated megafunction "MapGenerator:mp|lpm_divide:Div6" with the following parameter: File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 155
+Info (12130): Elaborated megafunction instantiation "MapGenerator:mp|lpm_divide:Div6" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 158
+Info (12133): Instantiated megafunction "MapGenerator:mp|lpm_divide:Div6" with the following parameter: File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 158
     Info (12134): Parameter "LPM_WIDTHN" = "9"
     Info (12134): Parameter "LPM_WIDTHD" = "6"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -2927,61 +2838,41 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_ekh File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/db/sign_div_unsign_ekh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_2te.tdf
     Info (12023): Found entity 1: alt_u_div_2te File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/db/alt_u_div_2te.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "MapGenerator:mp|lpm_divide:Div3" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 92
+Info (12133): Instantiated megafunction "MapGenerator:mp|lpm_divide:Div3" with the following parameter: File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 92
+    Info (12134): Parameter "LPM_WIDTHN" = "11"
+    Info (12134): Parameter "LPM_WIDTHD" = "6"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12130): Elaborated megafunction instantiation "MapGenerator:mp|lpm_divide:Div2" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 91
+Info (12133): Instantiated megafunction "MapGenerator:mp|lpm_divide:Div2" with the following parameter: File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 91
+    Info (12134): Parameter "LPM_WIDTHN" = "11"
+    Info (12134): Parameter "LPM_WIDTHD" = "6"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (13000): Registers with preset signals will power-up high File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 150
+Info (13000): Registers with preset signals will power-up high File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 180
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "imgActY[15]" is converted into an equivalent circuit using register "imgActY[15]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 150
-    Warning (13310): Register "imgActY[12]" is converted into an equivalent circuit using register "imgActY[12]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 150
-    Warning (13310): Register "imgActY[10]" is converted into an equivalent circuit using register "imgActY[10]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 150
-    Warning (13310): Register "imgActY[9]" is converted into an equivalent circuit using register "imgActY[9]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 150
-    Warning (13310): Register "imgActX[15]" is converted into an equivalent circuit using register "imgActX[15]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 150
-    Warning (13310): Register "imgActX[13]" is converted into an equivalent circuit using register "imgActX[13]~synth" and latch "imgActX[13]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 150
-    Warning (13310): Register "imgActX[11]" is converted into an equivalent circuit using register "imgActX[11]~synth" and latch "imgActX[13]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 150
-    Warning (13310): Register "imgActX[9]" is converted into an equivalent circuit using register "imgActX[9]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 150
-    Warning (13310): Register "imgOldActY[15]" is converted into an equivalent circuit using register "imgOldActY[15]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 150
-    Warning (13310): Register "imgOldActY[12]" is converted into an equivalent circuit using register "imgOldActY[12]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 150
-    Warning (13310): Register "imgOldActY[10]" is converted into an equivalent circuit using register "imgOldActY[10]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 150
-    Warning (13310): Register "imgOldActY[9]" is converted into an equivalent circuit using register "imgOldActY[9]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 150
-    Warning (13310): Register "imgOldActX[15]" is converted into an equivalent circuit using register "imgOldActX[15]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 150
-    Warning (13310): Register "imgOldActX[13]" is converted into an equivalent circuit using register "imgOldActX[13]~synth" and latch "imgActX[13]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 150
-    Warning (13310): Register "imgOldActX[11]" is converted into an equivalent circuit using register "imgOldActX[11]~synth" and latch "imgActX[13]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 150
-    Warning (13310): Register "imgOldActX[9]" is converted into an equivalent circuit using register "imgOldActX[9]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 150
+    Warning (13310): Register "imgActY[15]" is converted into an equivalent circuit using register "imgActY[15]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 180
+    Warning (13310): Register "imgActY[12]" is converted into an equivalent circuit using register "imgActY[12]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 180
+    Warning (13310): Register "imgActY[10]" is converted into an equivalent circuit using register "imgActY[10]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 180
+    Warning (13310): Register "imgActY[9]" is converted into an equivalent circuit using register "imgActY[9]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 180
+    Warning (13310): Register "imgActX[15]" is converted into an equivalent circuit using register "imgActX[15]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 180
+    Warning (13310): Register "imgActX[13]" is converted into an equivalent circuit using register "imgActX[13]~synth" and latch "imgActX[13]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 180
+    Warning (13310): Register "imgActX[10]" is converted into an equivalent circuit using register "imgActX[10]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 180
+    Warning (13310): Register "imgOldActY[15]" is converted into an equivalent circuit using register "imgOldActY[15]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 180
+    Warning (13310): Register "imgOldActY[12]" is converted into an equivalent circuit using register "imgOldActY[12]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 180
+    Warning (13310): Register "imgOldActY[10]" is converted into an equivalent circuit using register "imgOldActY[10]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 180
+    Warning (13310): Register "imgOldActY[9]" is converted into an equivalent circuit using register "imgOldActY[9]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 180
+    Warning (13310): Register "imgOldActX[15]" is converted into an equivalent circuit using register "imgOldActX[15]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 180
+    Warning (13310): Register "imgOldActX[13]" is converted into an equivalent circuit using register "imgOldActX[13]~synth" and latch "imgActX[13]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 180
+    Warning (13310): Register "imgOldActX[10]" is converted into an equivalent circuit using register "imgOldActX[10]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 180
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 29
-    Warning (13410): Pin "HEX2[0]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-    Warning (13410): Pin "HEX2[2]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-    Warning (13410): Pin "HEX2[3]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-    Warning (13410): Pin "HEX2[4]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-    Warning (13410): Pin "HEX2[6]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-    Warning (13410): Pin "HEX3[6]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-    Warning (13410): Pin "HEX4[0]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-    Warning (13410): Pin "HEX4[1]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-    Warning (13410): Pin "HEX4[2]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-    Warning (13410): Pin "HEX4[3]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-    Warning (13410): Pin "HEX4[4]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-    Warning (13410): Pin "HEX4[5]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-    Warning (13410): Pin "HEX4[6]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-    Warning (13410): Pin "HEX5[0]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-    Warning (13410): Pin "HEX5[1]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-    Warning (13410): Pin "HEX5[2]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-    Warning (13410): Pin "HEX5[3]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-    Warning (13410): Pin "HEX5[4]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-    Warning (13410): Pin "HEX5[5]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-    Warning (13410): Pin "HEX5[6]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 23
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 24
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 24
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 35
 Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register angle[0] will power up to Low File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 150
+    Critical Warning (18010): Register angle[0] will power up to Low File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 180
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Warning (20013): Ignored 70 assignments for entity "DE1_SOC" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK2_50 -entity DE1_SOC was ignored
@@ -3060,27 +2951,27 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
 Warning: RST port on the PLL is not properly connected on instance PLL:p0|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altera_pll.v Line: 749
     Info: Must be connected
 Warning (21074): Design contains 11 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[1]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 25
-    Warning (15610): No output dependent on input pin "KEY[2]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 25
-    Warning (15610): No output dependent on input pin "KEY[3]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 25
-    Warning (15610): No output dependent on input pin "SW[2]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[3]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[4]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[5]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[6]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[7]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[8]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 26
-    Warning (15610): No output dependent on input pin "SW[9]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 26
-Info (21057): Implemented 22084 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "KEY[1]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 24
+    Warning (15610): No output dependent on input pin "KEY[2]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 24
+    Warning (15610): No output dependent on input pin "KEY[3]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 24
+    Warning (15610): No output dependent on input pin "SW[2]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 25
+    Warning (15610): No output dependent on input pin "SW[3]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 25
+    Warning (15610): No output dependent on input pin "SW[4]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 25
+    Warning (15610): No output dependent on input pin "SW[5]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 25
+    Warning (15610): No output dependent on input pin "SW[6]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 25
+    Warning (15610): No output dependent on input pin "SW[7]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 25
+    Warning (15610): No output dependent on input pin "SW[8]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 25
+    Warning (15610): No output dependent on input pin "SW[9]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 25
+Info (21057): Implemented 22016 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
-    Info (21059): Implemented 81 output pins
-    Info (21061): Implemented 21987 logic cells
+    Info (21059): Implemented 29 output pins
+    Info (21061): Implemented 21971 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 474 warnings
-    Info: Peak virtual memory: 5045 megabytes
-    Info: Processing ended: Mon Apr 19 14:21:09 2021
-    Info: Elapsed time: 00:00:53
-    Info: Total CPU time (on all processors): 00:01:17
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 390 warnings
+    Info: Peak virtual memory: 5030 megabytes
+    Info: Processing ended: Sat Apr 24 21:26:42 2021
+    Info: Elapsed time: 00:00:56
+    Info: Total CPU time (on all processors): 00:01:19
 
 
 +------------------------------------------+

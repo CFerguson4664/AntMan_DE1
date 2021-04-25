@@ -1,3 +1,0 @@
-module atan_n(index,val);
-	input [5:0] index;
-	output [23:0]

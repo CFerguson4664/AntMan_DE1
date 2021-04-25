@@ -5,7 +5,7 @@ module VCTRL(CLK,SYNC,CNT,HCNT);
 	output reg[9:0] CNT;
 	wire CLRV;
 	
-	//Once the counter hits 525, reset it
+	//Once the counter hits 517, reset it
 	assign CLRV = (CNT <= 517) ? 1'b0 : 1'b1;
 	
 	//SYNC is active low. Set it low when we are in the vertical sync interval
@@ -16,7 +16,7 @@ module VCTRL(CLK,SYNC,CNT,HCNT);
 		if(CLRV) CNT <= 0;
 		else
 		begin
-			if(HCNT == 1086) CNT <= CNT + 1;
+			if(HCNT == 1086) CNT <= CNT + 10'd1;
 		end
 	end
 endmodule
