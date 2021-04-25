@@ -1,6 +1,6 @@
-// Mod 10 Finite State Machine
-// 3/4/21
-// Christopher Ferguson
+// Christopher Ferguson, Elliot Wannemacher
+// ANT FSM
+// Spring 2021
 
 module antFSM(LAntenna,RAntenna,FW,TLeft,TRight,CLK,reset);
 input CLK,LAntenna,RAntenna,reset;

@@ -1,3 +1,7 @@
+// Christopher Ferguson, Elliot Wannemacher
+// ECE361 Lab Project
+// Spring 2021
+
 module FrameBufferDisplay7(
 	CLOCK_50, 						// Input 50 MHz Clock
 	VGA_HS,							// VGA Horizontal Sync Signal
@@ -132,7 +136,7 @@ assign imgY = imgActY[17:7];
 
 
 //Connection to the CORDIC rotation algorithm
-multCordicFunctTest7 m0(logicCLK, CordicRST, CordicIDX, angle[21:9], CordicDATA, CordicDONE, ant1X,ant1Y,ant2X,ant2Y,xcomp,ycomp);//, HEX0,HEX1);
+multCordicFunctTest7 m0(logicCLK, CordicRST, CordicIDX, angle[21:9], CordicDATA, CordicDONE, ant1X,ant1Y,ant2X,ant2Y,xcomp,ycomp);
 
 
 //Calculate the global positions of the antennas

@@ -1,3 +1,7 @@
+// Christopher Ferguson, Elliot Wannemacher
+// ECE361 Lab Project
+// Spring 2021
+
 module MapGenerator(row,data,x,y,inBounds,ant1X,ant1Y,ant2X,ant2Y, ant1IB,ant2IB,map,reset,startX,startY,win);
 
 	input reset;

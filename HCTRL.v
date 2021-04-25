@@ -1,3 +1,7 @@
+// Christopher Ferguson, Elliot Wannemacher
+// ECE361 Lab Project
+// Spring 2021
+
 module HCTRL(CLK,SYNC,CNT);
 	input CLK;
 	output SYNC;

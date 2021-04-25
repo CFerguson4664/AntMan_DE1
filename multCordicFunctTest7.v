@@ -1,17 +1,16 @@
-// trying to figure out having the image as an output
-//module multCordicFunctTest4(SW,LEDR,KEY,CLOCK_50,HEX0,HEX1,HEX2,HEX3);
-module multCordicFunctTest7(clk, reset, lineCount, theta_i, lineResult, done, ant1X,ant1Y,ant2X,ant2Y,xcomp,ycomp);//, HEX0, HEX1);
+// Elliot Wannemacher, Christopher Ferguson
+// ECE361 Lab Project
+// Spring 2021
+
+module multCordicFunctTest7(clk, reset, lineCount, theta_i, lineResult, done, ant1X,ant1Y,ant2X,ant2Y,xcomp,ycomp);
 	input clk, reset;
 	input [9:0] lineCount;
 	input [12:0] theta_i;
-//	output [6:0] HEX0, HEX1;
 	output reg done = 0;
 	output reg [56:0] lineResult;
 	output reg[5:0] ant1X,ant1Y,ant2X,ant2Y;
 	output reg[9:0] xcomp,ycomp;
-	
-//	reg [6:0] h0, h1;
-	
+		
 	/*module unnamed (
 		input  wire [12:0] a,      //      a.a			Fraction: 10bits, width 13 bits, signed
 		input  wire        areset, // areset.reset
@@ -21,37 +20,19 @@ module multCordicFunctTest7(clk, reset, lineCount, theta_i, lineResult, done, an
 		input  wire [11:0] y,      //      y.y			Fraction: 10bits, width 12 bits, signed
 		output wire [9:0]  yo      //     yo.yo		Fraction: 8bits, width 10 bits, signed
 	);
-	
-*/
+	*/
 
-	parameter pipeOffset = 6'd19; // offset to translate origin to center of ant (47/2) will need to add in a 1'b.1 to vector
-	parameter y_offset = 6'd29;
+	parameter pipeOffset = 6'd19; // offset to ignore the first outputs of the cordic module
+	parameter y_offset = 6'd29;// offset to translate origin to center of ant
 	parameter x_offset = 6'd27;
 	
 	
-//	parameter x_i = 12'b001000000000; // d0.5 = 32
-//	wire [11:0] x_i = 12'b1_1_101010_0000; // -22?
+	wire [9:0] x_o, y_o; // wire to catch the output of the cordic module
 	
-	
-//	wire[12:0] theta_i = 13'b0_01_1001001000; // angle to rotate by (pi/2)
-//	wire[12:0] theta_i = 13'b0_00_1100100100; // angle to rotate by (pi/4)
-//	wire[12:0] theta_i = 13'b0_00_0000000000; // angle to rotate by (0)
-
-	// wire [row] varname [column]
-	// wire [wordWidth] varname [row][column]
-	
-	// input: 12'b0_0_000000_0000
-	
-	
-	// output: 10'b0_0_000000_00
-	wire [9:0] x_o, y_o;
-	
-	reg [11:0] xInput [415:0];
+	reg [11:0] xInput [415:0]; // registers to store the ant image
 	reg [11:0] yInput [415:0];
 	
-	reg [56:0] img_rotated [56:0];
-	
-	reg pipeCleaner [pipeOffset:0]; // place to put the trash cordic output (is this necessary?)
+	reg [56:0] img_rotated [56:0]; // register for the rotated ant
 	
 	initial begin
 	
@@ -61,7 +42,9 @@ module multCordicFunctTest7(clk, reset, lineCount, theta_i, lineResult, done, an
 			yInput[i] = 12'b0_0_000000_0000;
 		end
 		
-				
+		// these initializations set up the inputs to the cordic module
+		// we only store the pixels that have a value
+		
 // start 0
 		xInput[0] = {2'b00,6'd12,4'b0};
 		yInput[0] = {2'b00,6'd12,4'b0};
@@ -1342,36 +1325,31 @@ module multCordicFunctTest7(clk, reset, lineCount, theta_i, lineResult, done, an
 	initial begin
 		integer i;
 		for (i=0; i < 57; i = i + 1) begin // init to 0
-			img_rotated[i] = 57'b0; // this will make it so pixel 0,0 is always light up -> will deal with later
+			img_rotated[i] = 57'b0;
 		end
 		
 	
 	end
-	
-	reg [9:0] count = 0; // 19
-	reg [9:0] countD = 0;
-	reg [4:0] pipeCleanCount = 0;
-	
-	
-	
-	
-	// output from cordic:
-	// x,x,x,x,x,0,1,2,3
+		
+	reg [9:0] count = 0; // counts which pixel is being input to the cordic module
+	reg [9:0] countD = 0; // counter to output when the ant is fully rotated
+	reg [4:0] pipeCleanCount = 0; // counter to offset the input and output of the cordic module
 	
 	always @ (posedge clk)
 	begin
-		if (count >= 415) begin // is this _really_ just greater than?
+		if (count >= 415) begin  // loops around at 416
 			count <= 0;
 		end
 		else count <= count + 10'd1;
 		
 		
-		if (reset == 1) begin
+		if (reset == 1) begin // if reset, set all values to 0
 			countD <= 0;
 			count <= 0;
 			pipeCleanCount <= 0;
 			done <= 0;
 			
+			// this has to be done like this because normal verilog doesn't like 2d arrays
 			img_rotated[0] <= 0;
 			img_rotated[1] <= 0;
 			img_rotated[2] <= 0;
@@ -1434,29 +1412,29 @@ module multCordicFunctTest7(clk, reset, lineCount, theta_i, lineResult, done, an
 			
 		end 
 		
-		if(countD > pipeOffset + 480) begin
+		if(countD > pipeOffset + 480) begin // done logic
 			done <= 1'b1;
 		end else begin
 			countD <= countD + 10'd1;
 		end
 		
-		if (pipeCleanCount >= pipeOffset) begin
+		if (pipeCleanCount >= pipeOffset) begin // if cordic is outputting values we care about
 			// set values
 			// y_o[7:2] is the 'whole number' part of the output
 			img_rotated[y_o[7:2]+y_offset][x_o[7:2]+x_offset] <= 1;
-			img_rotated[y_offset][x_offset] <= 0;
+			img_rotated[y_offset][x_offset] <= 0; // removes an artifact of the cordic algo
 			
-			if(countD == pipeOffset + 1) begin
+			if(countD == pipeOffset + 1) begin // LAntenna
 				ant1X = x_o[7:2]+x_offset;
 				ant1Y = y_o[7:2]+y_offset;
 			end
 			
-			if(countD == pipeOffset + 29) begin
+			if(countD == pipeOffset + 29) begin // RAntenna
 				ant2X = x_o[7:2]+x_offset;
 				ant2Y = y_o[7:2]+y_offset;
 			end
 			
-			if(countD == pipeOffset + 125) begin
+			if(countD == pipeOffset + 125) begin // direction
 				xcomp = x_o[9:0];
 				ycomp = y_o[9:0];
 			end
@@ -1466,14 +1444,13 @@ module multCordicFunctTest7(clk, reset, lineCount, theta_i, lineResult, done, an
 		
 		end
 		
-		lineResult <= img_rotated[lineCount];
+		lineResult <= img_rotated[lineCount]; // output the requested line of the image; can't output entire image b/c normal verilog
 		
 	end
 	
+	// cordic module from ip catalog
 	unnamed c0(.a(theta_i), .areset(reset), .clk(clk), .x(xInput[count]-{2'b00,x_offset, 4'b0000}), .xo(x_o), .y(yInput[count]-{2'b00,y_offset, 4'b0000}), .yo(y_o));
 	
-//	bin7seghex h0d(h0, HEX0);
-//	bin7seghex h1d(h1, HEX1);
 	
 				
 endmodule 

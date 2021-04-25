@@ -1,5 +1,5 @@
 Flow report for AntMan
-Sat Apr 24 21:33:14 2021
+Sun Apr 25 09:38:02 2021
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -41,25 +41,25 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sat Apr 24 21:32:29 2021       ;
+; Flow Status                     ; Successful - Sun Apr 25 09:38:01 2021       ;
 ; Quartus Prime Version           ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                   ; AntMan                                      ;
 ; Top-level Entity Name           ; FrameBufferDisplay7                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 11,843 / 32,070 ( 37 % )                    ;
-; Total registers                 ; 14583                                       ;
-; Total pins                      ; 44 / 457 ( 10 % )                           ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 14546                                       ;
+; Total pins                      ; 44                                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
-; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
 ; Total HSSI TX PCSs              ; 0                                           ;
 ; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 1 / 6 ( 17 % )                              ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
+; Total PLLs                      ; 1                                           ;
+; Total DLLs                      ; 0                                           ;
 +---------------------------------+---------------------------------------------+
 
 
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/24/2021 21:25:46 ;
+; Start date & time ; 04/25/2021 09:36:42 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; AntMan              ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+-----------------------------------------------------------+---------------+---------------------+------------+
 ; Assignment Name                     ; Value                                                     ; Default Value ; Entity Name         ; Section Id ;
 +-------------------------------------+-----------------------------------------------------------+---------------+---------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 88623642282460.161931394611604                            ; --            ; --                  ; --         ;
+; COMPILER_SIGNATURE_ID               ; 1098278943549.161935780216640                             ; --            ; --                  ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                        ; --            ; --                  ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                         ; --            ; --                  ; --         ;
 ; MISC_FILE                           ; unnamed/synthesis/../unnamed.cmp                          ; --            ; --                  ; --         ;
@@ -107,11 +107,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:53     ; 1.5                     ; 5030 MB             ; 00:01:16                           ;
-; Fitter               ; 00:05:17     ; 1.4                     ; 6818 MB             ; 00:10:56                           ;
-; Assembler            ; 00:00:22     ; 1.0                     ; 5013 MB             ; 00:00:20                           ;
-; Timing Analyzer      ; 00:00:44     ; 2.8                     ; 5516 MB             ; 00:01:39                           ;
-; Total                ; 00:07:16     ; --                      ; --                  ; 00:14:11                           ;
+; Analysis & Synthesis ; 00:01:17     ; 2.6                     ; 5049 MB             ; 00:01:11                           ;
+; Total                ; 00:01:17     ; --                      ; --                  ; 00:01:11                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -120,10 +117,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-0AV4209  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-0AV4209  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; DESKTOP-0AV4209  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; DESKTOP-0AV4209  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; zeniot           ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -131,9 +125,6 @@ https://fpgasoftware.intel.com/eula.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off AntMan -c AntMan
-quartus_fit --read_settings_files=off --write_settings_files=off AntMan -c AntMan
-quartus_asm --read_settings_files=off --write_settings_files=off AntMan -c AntMan
-quartus_sta AntMan -c AntMan
 
 
 
