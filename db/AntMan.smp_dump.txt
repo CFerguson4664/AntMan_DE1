@@ -1,0 +1,7 @@
+
+State Machine - |FrameBufferDisplay7|antFSM:antFSMMain|pState
+Name pState.SA pState.SE pState.SB pState.SLost 
+pState.SLost 0 0 0 0 
+pState.SB 0 0 1 1 
+pState.SE 0 1 0 1 
+pState.SA 1 0 0 1 
