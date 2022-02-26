@@ -1,6 +1,6 @@
 Analysis & Synthesis report for AntMan
-Sun Apr 25 09:38:02 2021
-Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Fri Feb 25 21:52:01 2022
+Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
 
 
 ---------------------
@@ -70,12 +70,12 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
  62. Parameter Settings for User Entity Instance: multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist11_xip1_12_uid255_vecRotateTest_b_3
  63. Parameter Settings for User Entity Instance: multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist7_lowRangeA_uid305_outXE_uid260_vecRotateTest_b_1
  64. Parameter Settings for User Entity Instance: multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist6_sR_uid318_outXE_uid260_vecRotateTest_b_1
- 65. Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div1
- 66. Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div6
- 67. Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div3
- 68. Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div2
- 69. Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div5
- 70. Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div4
+ 65. Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div3
+ 66. Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div2
+ 67. Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div5
+ 68. Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div4
+ 69. Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div1
+ 70. Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div6
  71. Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div0
  72. Port Connectivity Checks: "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist6_sR_uid318_outXE_uid260_vecRotateTest_b_1"
  73. Port Connectivity Checks: "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist7_lowRangeA_uid305_outXE_uid260_vecRotateTest_b_1"
@@ -134,7 +134,7 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2019  Intel Corporation. All rights reserved.
+Copyright (C) 2021  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -154,14 +154,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Apr 25 09:38:01 2021       ;
-; Quartus Prime Version           ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
+; Analysis & Synthesis Status     ; Successful - Fri Feb 25 21:52:00 2022       ;
+; Quartus Prime Version           ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
 ; Revision Name                   ; AntMan                                      ;
 ; Top-level Entity Name           ; FrameBufferDisplay7                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 14546                                       ;
-; Total pins                      ; 44                                          ;
+; Total pins                      ; 54                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -182,7 +182,7 @@ https://fpgasoftware.intel.com/eula.
 ; Device                                                                          ; 5CSEMA5F31C6        ;                    ;
 ; Top-level entity name                                                           ; FrameBufferDisplay7 ; AntMan             ;
 ; Family name                                                                     ; Cyclone V           ; Cyclone V          ;
-; Use smart compilation                                                           ; Off                 ; Off                ;
+; Use smart compilation                                                           ; On                  ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                  ; On                 ;
 ; Enable compact report table                                                     ; Off                 ; Off                ;
 ; Restructure Multiplexers                                                        ; Auto                ; Auto               ;
@@ -266,49 +266,49 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
+; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 2.56        ;
+; Average used               ; 1.50        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  55.1%      ;
-;     Processor 3            ;  55.0%      ;
-;     Processor 4            ;  45.7%      ;
+;     Processor 2            ;  19.6%      ;
+;     Processor 3            ;  17.1%      ;
+;     Processor 4            ;  13.2%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                   ;
-+--------------------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                       ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                         ; Library ;
-+--------------------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
-; unnamed/synthesis/unnamed.v                            ; yes             ; User Verilog HDL File        ; C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/unnamed/synthesis/unnamed.v                            ; unnamed ;
-; unnamed/synthesis/submodules/dspba_library_package.vhd ; yes             ; User VHDL File               ; C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/unnamed/synthesis/submodules/dspba_library_package.vhd ; unnamed ;
-; unnamed/synthesis/submodules/dspba_library.vhd         ; yes             ; User VHDL File               ; C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/unnamed/synthesis/submodules/dspba_library.vhd         ; unnamed ;
-; unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd      ; yes             ; User VHDL File               ; C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd      ; unnamed ;
-; VCTRL.v                                                ; yes             ; User Verilog HDL File        ; C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/VCTRL.v                                                ;         ;
-; HCTRL.v                                                ; yes             ; User Verilog HDL File        ; C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/HCTRL.v                                                ;         ;
-; PLL.v                                                  ; yes             ; User Wizard-Generated File   ; C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/PLL.v                                                  ; PLL     ;
-; PLL/PLL_0002.v                                         ; yes             ; User Verilog HDL File        ; C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/PLL/PLL_0002.v                                         ; PLL     ;
-; MapGenerator.v                                         ; yes             ; User Verilog HDL File        ; C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/MapGenerator.v                                         ;         ;
-; multCordicFunctTest7.v                                 ; yes             ; User Verilog HDL File        ; C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/multCordicFunctTest7.v                                 ;         ;
-; FrameBufferDisplay7.v                                  ; yes             ; User Verilog HDL File        ; C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v                                  ;         ;
-; antFSM.v                                               ; yes             ; User Verilog HDL File        ; C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/antFSM.v                                               ;         ;
-; altera_pll.v                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altera_pll.v                                                  ;         ;
-; lpm_divide.tdf                                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_divide.tdf                                                ;         ;
-; abs_divider.inc                                        ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/abs_divider.inc                                               ;         ;
-; sign_div_unsign.inc                                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                           ;         ;
-; aglobal191.inc                                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/aglobal191.inc                                                ;         ;
-; db/lpm_divide_hbm.tdf                                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/db/lpm_divide_hbm.tdf                                  ;         ;
-; db/sign_div_unsign_nlh.tdf                             ; yes             ; Auto-Generated Megafunction  ; C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/db/sign_div_unsign_nlh.tdf                             ;         ;
-; db/alt_u_div_kve.tdf                                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/db/alt_u_div_kve.tdf                                   ;         ;
-; db/lpm_divide_8am.tdf                                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/db/lpm_divide_8am.tdf                                  ;         ;
-; db/sign_div_unsign_ekh.tdf                             ; yes             ; Auto-Generated Megafunction  ; C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/db/sign_div_unsign_ekh.tdf                             ;         ;
-; db/alt_u_div_2te.tdf                                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/db/alt_u_div_2te.tdf                                   ;         ;
-+--------------------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                               ;
++--------------------------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                       ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                     ; Library ;
++--------------------------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
+; unnamed/synthesis/unnamed.v                            ; yes             ; User Verilog HDL File        ; D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/unnamed.v                            ; unnamed ;
+; unnamed/synthesis/submodules/dspba_library_package.vhd ; yes             ; User VHDL File               ; D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/dspba_library_package.vhd ; unnamed ;
+; unnamed/synthesis/submodules/dspba_library.vhd         ; yes             ; User VHDL File               ; D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/dspba_library.vhd         ; unnamed ;
+; unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd      ; yes             ; User VHDL File               ; D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd      ; unnamed ;
+; VCTRL.v                                                ; yes             ; User Verilog HDL File        ; D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/VCTRL.v                                                ;         ;
+; HCTRL.v                                                ; yes             ; User Verilog HDL File        ; D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/HCTRL.v                                                ;         ;
+; PLL.v                                                  ; yes             ; User Wizard-Generated File   ; D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/PLL.v                                                  ; PLL     ;
+; PLL/PLL_0002.v                                         ; yes             ; User Verilog HDL File        ; D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/PLL/PLL_0002.v                                         ; PLL     ;
+; MapGenerator.v                                         ; yes             ; User Verilog HDL File        ; D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v                                         ;         ;
+; multCordicFunctTest7.v                                 ; yes             ; User Verilog HDL File        ; D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/multCordicFunctTest7.v                                 ;         ;
+; FrameBufferDisplay7.v                                  ; yes             ; User Verilog HDL File        ; D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v                                  ;         ;
+; antFSM.v                                               ; yes             ; User Verilog HDL File        ; D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/antFSM.v                                               ;         ;
+; altera_pll.v                                           ; yes             ; Megafunction                 ; d:/quartus/fpga/quartus/libraries/megafunctions/altera_pll.v                                                     ;         ;
+; lpm_divide.tdf                                         ; yes             ; Megafunction                 ; d:/quartus/fpga/quartus/libraries/megafunctions/lpm_divide.tdf                                                   ;         ;
+; abs_divider.inc                                        ; yes             ; Megafunction                 ; d:/quartus/fpga/quartus/libraries/megafunctions/abs_divider.inc                                                  ;         ;
+; sign_div_unsign.inc                                    ; yes             ; Megafunction                 ; d:/quartus/fpga/quartus/libraries/megafunctions/sign_div_unsign.inc                                              ;         ;
+; aglobal211.inc                                         ; yes             ; Megafunction                 ; d:/quartus/fpga/quartus/libraries/megafunctions/aglobal211.inc                                                   ;         ;
+; db/lpm_divide_hbm.tdf                                  ; yes             ; Auto-Generated Megafunction  ; D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/db/lpm_divide_hbm.tdf                                  ;         ;
+; db/sign_div_unsign_nlh.tdf                             ; yes             ; Auto-Generated Megafunction  ; D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/db/sign_div_unsign_nlh.tdf                             ;         ;
+; db/alt_u_div_kve.tdf                                   ; yes             ; Auto-Generated Megafunction  ; D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/db/alt_u_div_kve.tdf                                   ;         ;
+; db/lpm_divide_8am.tdf                                  ; yes             ; Auto-Generated Megafunction  ; D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/db/lpm_divide_8am.tdf                                  ;         ;
+; db/sign_div_unsign_ekh.tdf                             ; yes             ; Auto-Generated Megafunction  ; D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/db/sign_div_unsign_ekh.tdf                             ;         ;
+; db/alt_u_div_2te.tdf                                   ; yes             ; Auto-Generated Megafunction  ; D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/db/alt_u_div_2te.tdf                                   ;         ;
++--------------------------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------------------------------------------------------+
@@ -318,16 +318,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------------------------------------------------------------+
 ; Estimate of Logic utilization (ALMs needed) ; 10466                                                           ;
 ;                                             ;                                                                 ;
-; Combinational ALUT usage for logic          ; 14983                                                           ;
+; Combinational ALUT usage for logic          ; 14985                                                           ;
 ;     -- 7 input functions                    ; 12                                                              ;
-;     -- 6 input functions                    ; 3640                                                            ;
-;     -- 5 input functions                    ; 1953                                                            ;
-;     -- 4 input functions                    ; 4103                                                            ;
-;     -- <=3 input functions                  ; 5275                                                            ;
+;     -- 6 input functions                    ; 3638                                                            ;
+;     -- 5 input functions                    ; 1954                                                            ;
+;     -- 4 input functions                    ; 4104                                                            ;
+;     -- <=3 input functions                  ; 5277                                                            ;
 ;                                             ;                                                                 ;
 ; Dedicated logic registers                   ; 14546                                                           ;
 ;                                             ;                                                                 ;
-; I/O pins                                    ; 44                                                              ;
+; I/O pins                                    ; 54                                                              ;
 ;                                             ;                                                                 ;
 ; Total DSP Blocks                            ; 0                                                               ;
 ;                                             ;                                                                 ;
@@ -336,7 +336,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                                                                 ;
 ; Maximum fan-out node                        ; PLL:p0|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
 ; Maximum fan-out                             ; 14546                                                           ;
-; Total fan-out                               ; 106475                                                          ;
+; Total fan-out                               ; 106490                                                          ;
 ; Average fan-out                             ; 3.59                                                            ;
 +---------------------------------------------+-----------------------------------------------------------------+
 
@@ -346,7 +346,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node                                                            ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                       ; Entity Name          ; Library Name ;
 +---------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+--------------+
-; |FrameBufferDisplay7                                                                  ; 14983 (8254)        ; 14546 (9912)              ; 0                 ; 0          ; 44   ; 0            ; |FrameBufferDisplay7                                                                                                                                      ; FrameBufferDisplay7  ; work         ;
+; |FrameBufferDisplay7                                                                  ; 14985 (8255)        ; 14546 (9912)              ; 0                 ; 0          ; 54   ; 0            ; |FrameBufferDisplay7                                                                                                                                      ; FrameBufferDisplay7  ; work         ;
 ;    |HCTRL:CTRL0|                                                                      ; 13 (13)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|HCTRL:CTRL0                                                                                                                          ; HCTRL                ; work         ;
 ;    |MapGenerator:mp|                                                                  ; 620 (50)            ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|MapGenerator:mp                                                                                                                      ; MapGenerator         ; work         ;
 ;       |lpm_divide:Div0|                                                               ; 86 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|MapGenerator:mp|lpm_divide:Div0                                                                                                      ; lpm_divide           ; work         ;
@@ -381,7 +381,7 @@ https://fpgasoftware.intel.com/eula.
 ;       |PLL_0002:pll_inst|                                                             ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|PLL:p0|PLL_0002:pll_inst                                                                                                             ; PLL_0002             ; PLL          ;
 ;          |altera_pll:altera_pll_i|                                                    ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|PLL:p0|PLL_0002:pll_inst|altera_pll:altera_pll_i                                                                                     ; altera_pll           ; work         ;
 ;    |VCTRL:CTRL1|                                                                      ; 13 (13)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|VCTRL:CTRL1                                                                                                                          ; VCTRL                ; work         ;
-;    |antFSM:antFSMMain|                                                                ; 2 (2)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|antFSM:antFSMMain                                                                                                                    ; antFSM               ; work         ;
+;    |antFSM:antFSMMain|                                                                ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|antFSM:antFSMMain                                                                                                                    ; antFSM               ; work         ;
 ;    |multCordicFunctTest7:m0|                                                          ; 6081 (4578)         ; 4608 (3373)               ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|multCordicFunctTest7:m0                                                                                                              ; multCordicFunctTest7 ; work         ;
 ;       |unnamed:c0|                                                                    ; 1503 (0)            ; 1235 (0)                  ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0                                                                                                   ; unnamed              ; unnamed      ;
 ;          |unnamed_CORDIC_0:cordic_0|                                                  ; 1503 (1493)         ; 1235 (351)                ; 0                 ; 0          ; 0    ; 0            ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0                                                                         ; unnamed_CORDIC_0     ; unnamed      ;
@@ -829,12 +829,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; imgActY[13]                            ; 9       ;
 ; imgActY[11]                            ; 12      ;
 ; imgActX[11]                            ; 12      ;
-; imgOldActY[13]                         ; 1       ;
+; imgActY[13]                            ; 9       ;
 ; imgOldActY[11]                         ; 1       ;
 ; imgOldActX[11]                         ; 1       ;
+; imgOldActY[13]                         ; 1       ;
 ; Total number of inverted registers = 6 ;         ;
 +----------------------------------------+---------+
 
@@ -853,13 +853,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |FrameBufferDisplay7|multCordicFunctTest7:m0|ycomp[1]                                                            ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |FrameBufferDisplay7|multCordicFunctTest7:m0|xcomp[9]                                                            ;
 ; 3:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |FrameBufferDisplay7|imgActX[9]                                                                                  ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |FrameBufferDisplay7|VPixel[5]                                                                                   ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |FrameBufferDisplay7|HPixel[4]                                                                                   ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |FrameBufferDisplay7|VPixel[6]                                                                                   ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |FrameBufferDisplay7|HPixel[3]                                                                                   ;
 ; 6:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |FrameBufferDisplay7|angle[14]                                                                                   ;
-; 6:1                ; 15 bits   ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; Yes        ; |FrameBufferDisplay7|angle[6]                                                                                    ;
+; 6:1                ; 15 bits   ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; Yes        ; |FrameBufferDisplay7|angle[5]                                                                                    ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |FrameBufferDisplay7|imgActX[10]                                                                                 ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|Mux31                          ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|Mux36                          ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|Mux30                          ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|Mux41                          ;
 ; 1024:1             ; 2 bits    ; 1364 LEs      ; 1134 LEs             ; 230 LEs                ; No         ; |FrameBufferDisplay7|Mux1                                                                                        ;
 ; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|absX_uid33_vecRotateTest_q[11] ;
 ; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |FrameBufferDisplay7|multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|absY_uid34_vecRotateTest_q[8]  ;
@@ -1749,52 +1749,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div1 ;
-+------------------------+----------------+----------------------------------------+
-; Parameter Name         ; Value          ; Type                                   ;
-+------------------------+----------------+----------------------------------------+
-; LPM_WIDTHN             ; 11             ; Untyped                                ;
-; LPM_WIDTHD             ; 6              ; Untyped                                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
-; LPM_PIPELINE           ; 0              ; Untyped                                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
-; CBXI_PARAMETER         ; lpm_divide_hbm ; Untyped                                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                         ;
-+------------------------+----------------+----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div6 ;
-+------------------------+----------------+----------------------------------------+
-; Parameter Name         ; Value          ; Type                                   ;
-+------------------------+----------------+----------------------------------------+
-; LPM_WIDTHN             ; 9              ; Untyped                                ;
-; LPM_WIDTHD             ; 6              ; Untyped                                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
-; LPM_PIPELINE           ; 0              ; Untyped                                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
-; CBXI_PARAMETER         ; lpm_divide_8am ; Untyped                                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                         ;
-+------------------------+----------------+----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div3 ;
 +------------------------+----------------+----------------------------------------+
 ; Parameter Name         ; Value          ; Type                                   ;
@@ -1876,6 +1830,52 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
 ; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
 ; CBXI_PARAMETER         ; lpm_divide_hbm ; Untyped                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                         ;
++------------------------+----------------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div1 ;
++------------------------+----------------+----------------------------------------+
+; Parameter Name         ; Value          ; Type                                   ;
++------------------------+----------------+----------------------------------------+
+; LPM_WIDTHN             ; 11             ; Untyped                                ;
+; LPM_WIDTHD             ; 6              ; Untyped                                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
+; CBXI_PARAMETER         ; lpm_divide_hbm ; Untyped                                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                         ;
++------------------------+----------------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: MapGenerator:mp|lpm_divide:Div6 ;
++------------------------+----------------+----------------------------------------+
+; Parameter Name         ; Value          ; Type                                   ;
++------------------------+----------------+----------------------------------------+
+; LPM_WIDTHN             ; 9              ; Untyped                                ;
+; LPM_WIDTHD             ; 6              ; Untyped                                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
+; LPM_PIPELINE           ; 0              ; Untyped                                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
+; CBXI_PARAMETER         ; lpm_divide_8am ; Untyped                                ;
 ; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
 ; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
 ; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
@@ -2352,7 +2352,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SLD           ; 1688                        ;
 ;     SCLR              ; 21                          ;
 ;     plain             ; 4990                        ;
-; arriav_lcell_comb     ; 14983                       ;
+; arriav_lcell_comb     ; 14987                       ;
 ;     arith             ; 1811                        ;
 ;         0 data inputs ; 72                          ;
 ;         1 data inputs ; 494                         ;
@@ -2362,19 +2362,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         5 data inputs ; 4                           ;
 ;     extend            ; 12                          ;
 ;         7 data inputs ; 12                          ;
-;     normal            ; 12910                       ;
+;     normal            ; 12914                       ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 16                          ;
-;         2 data inputs ; 997                         ;
-;         3 data inputs ; 2276                        ;
-;         4 data inputs ; 4031                        ;
-;         5 data inputs ; 1949                        ;
-;         6 data inputs ; 3640                        ;
+;         1 data inputs ; 18                          ;
+;         2 data inputs ; 1000                        ;
+;         3 data inputs ; 2275                        ;
+;         4 data inputs ; 4032                        ;
+;         5 data inputs ; 1950                        ;
+;         6 data inputs ; 3638                        ;
 ;     shared            ; 250                         ;
 ;         0 data inputs ; 11                          ;
 ;         1 data inputs ; 218                         ;
 ;         2 data inputs ; 21                          ;
-; boundary_port         ; 44                          ;
+; boundary_port         ; 54                          ;
 ; generic_pll           ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 18.40                       ;
@@ -2387,7 +2387,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:49     ;
+; Top            ; 00:00:41     ;
 +----------------+--------------+
 
 
@@ -2396,50 +2396,51 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Sun Apr 25 09:36:42 2021
+    Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+    Info: Processing started: Fri Feb 25 21:51:01 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AntMan -c AntMan
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file unnamed/synthesis/unnamed.v
-    Info (12023): Found entity 1: unnamed File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/unnamed/synthesis/unnamed.v Line: 6
+    Info (12023): Found entity 1: unnamed File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/unnamed.v Line: 6
 Info (12021): Found 1 design units, including 0 entities, in source file unnamed/synthesis/submodules/dspba_library_package.vhd
-    Info (12022): Found design unit 1: dspba_library_package (unnamed) File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/unnamed/synthesis/submodules/dspba_library_package.vhd Line: 17
+    Info (12022): Found design unit 1: dspba_library_package (unnamed) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/dspba_library_package.vhd Line: 17
 Info (12021): Found 6 design units, including 3 entities, in source file unnamed/synthesis/submodules/dspba_library.vhd
-    Info (12022): Found design unit 1: dspba_delay-delay File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/unnamed/synthesis/submodules/dspba_library.vhd Line: 34
-    Info (12022): Found design unit 2: dspba_sync_reg-sync_reg File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/unnamed/synthesis/submodules/dspba_library.vhd Line: 117
-    Info (12022): Found design unit 3: dspba_pipe-rtl File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/unnamed/synthesis/submodules/dspba_library.vhd Line: 356
-    Info (12023): Found entity 1: dspba_delay File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/unnamed/synthesis/submodules/dspba_library.vhd Line: 18
-    Info (12023): Found entity 2: dspba_sync_reg File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/unnamed/synthesis/submodules/dspba_library.vhd Line: 93
-    Info (12023): Found entity 3: dspba_pipe File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/unnamed/synthesis/submodules/dspba_library.vhd Line: 343
+    Info (12022): Found design unit 1: dspba_delay-delay File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/dspba_library.vhd Line: 34
+    Info (12022): Found design unit 2: dspba_sync_reg-sync_reg File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/dspba_library.vhd Line: 117
+    Info (12022): Found design unit 3: dspba_pipe-rtl File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/dspba_library.vhd Line: 356
+    Info (12023): Found entity 1: dspba_delay File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/dspba_library.vhd Line: 18
+    Info (12023): Found entity 2: dspba_sync_reg File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/dspba_library.vhd Line: 93
+    Info (12023): Found entity 3: dspba_pipe File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/dspba_library.vhd Line: 343
 Info (12021): Found 2 design units, including 1 entities, in source file unnamed/synthesis/submodules/unnamed_cordic_0.vhd
-    Info (12022): Found design unit 1: unnamed_CORDIC_0-normal File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 48
-    Info (12023): Found entity 1: unnamed_CORDIC_0 File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 36
+    Info (12022): Found design unit 1: unnamed_CORDIC_0-normal File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 48
+    Info (12023): Found entity 1: unnamed_CORDIC_0 File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 36
 Info (12021): Found 1 design units, including 1 entities, in source file sshex.v
-    Info (12023): Found entity 1: SSHEX File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/SSHEX.v Line: 1
+    Info (12023): Found entity 1: SSHEX File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/SSHEX.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vctrl.v
-    Info (12023): Found entity 1: VCTRL File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/VCTRL.v Line: 5
+    Info (12023): Found entity 1: VCTRL File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/VCTRL.v Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file hctrl.v
-    Info (12023): Found entity 1: HCTRL File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/HCTRL.v Line: 5
+    Info (12023): Found entity 1: HCTRL File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/HCTRL.v Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file pll.v
-    Info (12023): Found entity 1: PLL File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/PLL.v Line: 8
+    Info (12023): Found entity 1: PLL File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/PLL.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file pll/pll_0002.v
-    Info (12023): Found entity 1: PLL_0002 File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/PLL/PLL_0002.v Line: 2
+    Info (12023): Found entity 1: PLL_0002 File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/PLL/PLL_0002.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file mapgenerator.v
-    Info (12023): Found entity 1: MapGenerator File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/MapGenerator.v Line: 5
+    Info (12023): Found entity 1: MapGenerator File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file multcordicfuncttest7.v
-    Info (12023): Found entity 1: multCordicFunctTest7 File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/multCordicFunctTest7.v Line: 5
+    Info (12023): Found entity 1: multCordicFunctTest7 File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/multCordicFunctTest7.v Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file framebufferdisplay7.v
-    Info (12023): Found entity 1: FrameBufferDisplay7 File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 5
+    Info (12023): Found entity 1: FrameBufferDisplay7 File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file antfsm.v
-    Info (12023): Found entity 1: antFSM File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/antFSM.v Line: 5
+    Info (12023): Found entity 1: antFSM File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/antFSM.v Line: 5
 Info (12127): Elaborating entity "FrameBufferDisplay7" for the top level hierarchy
-Info (12128): Elaborating entity "PLL" for hierarchy "PLL:p0" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 100
-Info (12128): Elaborating entity "PLL_0002" for hierarchy "PLL:p0|PLL_0002:pll_inst" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/PLL.v Line: 19
-Info (12128): Elaborating entity "altera_pll" for hierarchy "PLL:p0|PLL_0002:pll_inst|altera_pll:altera_pll_i" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/PLL/PLL_0002.v Line: 85
+Warning (10034): Output port "LEDR[9..5]" at FrameBufferDisplay7.v(33) has no driver File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 33
+Info (12128): Elaborating entity "PLL" for hierarchy "PLL:p0" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 100
+Info (12128): Elaborating entity "PLL_0002" for hierarchy "PLL:p0|PLL_0002:pll_inst" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/PLL.v Line: 19
+Info (12128): Elaborating entity "altera_pll" for hierarchy "PLL:p0|PLL_0002:pll_inst|altera_pll:altera_pll_i" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/PLL/PLL_0002.v Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
-Info (12130): Elaborated megafunction instantiation "PLL:p0|PLL_0002:pll_inst|altera_pll:altera_pll_i" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/PLL/PLL_0002.v Line: 85
-Info (12133): Instantiated megafunction "PLL:p0|PLL_0002:pll_inst|altera_pll:altera_pll_i" with the following parameter: File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/PLL/PLL_0002.v Line: 85
+Info (12130): Elaborated megafunction instantiation "PLL:p0|PLL_0002:pll_inst|altera_pll:altera_pll_i" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/PLL/PLL_0002.v Line: 85
+Info (12133): Instantiated megafunction "PLL:p0|PLL_0002:pll_inst|altera_pll:altera_pll_i" with the following parameter: File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/PLL/PLL_0002.v Line: 85
     Info (12134): Parameter "fractional_vco_multiplier" = "false"
     Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
     Info (12134): Parameter "operation_mode" = "direct"
@@ -2500,28 +2501,28 @@ Info (12133): Instantiated megafunction "PLL:p0|PLL_0002:pll_inst|altera_pll:alt
     Info (12134): Parameter "duty_cycle17" = "50"
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
-Info (12128): Elaborating entity "HCTRL" for hierarchy "HCTRL:CTRL0" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 106
-Info (12128): Elaborating entity "VCTRL" for hierarchy "VCTRL:CTRL1" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 109
-Info (12128): Elaborating entity "MapGenerator" for hierarchy "MapGenerator:mp" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 128
-Warning (10240): Verilog HDL Always Construct warning at MapGenerator.v(93): inferring latch(es) for variable "win", which holds its previous value in one or more paths through the always construct File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/MapGenerator.v Line: 93
-Info (10041): Inferred latch for "win" at MapGenerator.v(93) File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/MapGenerator.v Line: 93
-Info (12128): Elaborating entity "antFSM" for hierarchy "antFSM:antFSMMain" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 131
-Info (12128): Elaborating entity "multCordicFunctTest7" for hierarchy "multCordicFunctTest7:m0" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 139
-Info (12128): Elaborating entity "unnamed" for hierarchy "multCordicFunctTest7:m0|unnamed:c0" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/multCordicFunctTest7.v Line: 1452
-Info (12128): Elaborating entity "unnamed_CORDIC_0" for hierarchy "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/unnamed/synthesis/unnamed.v Line: 24
-Info (12128): Elaborating entity "dspba_delay" for hierarchy "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist3_signA_uid7_vecRotateTest_merged_bit_select_c_1" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 609
-Info (12128): Elaborating entity "dspba_delay" for hierarchy "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist1_msbUAbsAE_uid12_vecRotateTest_merged_bit_select_c_1" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 644
-Info (12128): Elaborating entity "dspba_delay" for hierarchy "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist0_msbUAbsAE_uid12_vecRotateTest_merged_bit_select_b_1" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 649
-Info (12128): Elaborating entity "dspba_delay" for hierarchy "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist42_aip1E_uid51_vecRotateTest_b_1" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 719
-Info (12128): Elaborating entity "dspba_delay" for hierarchy "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist38_xip1_3_uid85_vecRotateTest_b_1" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 1243
-Info (12128): Elaborating entity "dspba_delay" for hierarchy "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist34_yip1_4_uid104_vecRotateTest_b_1" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 1301
-Info (12128): Elaborating entity "dspba_delay" for hierarchy "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist32_xip1_5_uid121_vecRotateTest_b_1" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 1356
-Info (12128): Elaborating entity "dspba_delay" for hierarchy "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist28_yip1_6_uid142_vecRotateTest_b_1" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 1414
-Info (12128): Elaborating entity "dspba_delay" for hierarchy "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist9_yip1_12_uid256_vecRotateTest_b_3" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 1743
-Info (12128): Elaborating entity "dspba_delay" for hierarchy "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist5_lowRangeA_uid360_outYE_uid262_vecRotateTest_b_1" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 1837
-Info (12128): Elaborating entity "dspba_delay" for hierarchy "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist4_sR_uid373_outYE_uid262_vecRotateTest_b_1" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 1849
+Info (12128): Elaborating entity "HCTRL" for hierarchy "HCTRL:CTRL0" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 106
+Info (12128): Elaborating entity "VCTRL" for hierarchy "VCTRL:CTRL1" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 109
+Info (12128): Elaborating entity "MapGenerator" for hierarchy "MapGenerator:mp" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 128
+Warning (10240): Verilog HDL Always Construct warning at MapGenerator.v(93): inferring latch(es) for variable "win", which holds its previous value in one or more paths through the always construct File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 93
+Info (10041): Inferred latch for "win" at MapGenerator.v(93) File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 93
+Info (12128): Elaborating entity "antFSM" for hierarchy "antFSM:antFSMMain" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 131
+Info (12128): Elaborating entity "multCordicFunctTest7" for hierarchy "multCordicFunctTest7:m0" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 146
+Info (12128): Elaborating entity "unnamed" for hierarchy "multCordicFunctTest7:m0|unnamed:c0" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/multCordicFunctTest7.v Line: 1452
+Info (12128): Elaborating entity "unnamed_CORDIC_0" for hierarchy "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/unnamed.v Line: 24
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist3_signA_uid7_vecRotateTest_merged_bit_select_c_1" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 609
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist1_msbUAbsAE_uid12_vecRotateTest_merged_bit_select_c_1" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 644
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist0_msbUAbsAE_uid12_vecRotateTest_merged_bit_select_b_1" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 649
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist42_aip1E_uid51_vecRotateTest_b_1" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 719
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist38_xip1_3_uid85_vecRotateTest_b_1" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 1243
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist34_yip1_4_uid104_vecRotateTest_b_1" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 1301
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist32_xip1_5_uid121_vecRotateTest_b_1" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 1356
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist28_yip1_6_uid142_vecRotateTest_b_1" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 1414
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist9_yip1_12_uid256_vecRotateTest_b_3" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 1743
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist5_lowRangeA_uid360_outYE_uid262_vecRotateTest_b_1" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 1837
+Info (12128): Elaborating entity "dspba_delay" for hierarchy "multCordicFunctTest7:m0|unnamed:c0|unnamed_CORDIC_0:cordic_0|dspba_delay:redist4_sR_uid373_outYE_uid262_vecRotateTest_b_1" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/unnamed/synthesis/submodules/unnamed_CORDIC_0.vhd Line: 1849
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "ant" is uninferred due to asynchronous read logic File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 84
+    Info (276007): RAM logic "ant" is uninferred due to asynchronous read logic File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 84
 Warning (20013): Ignored 70 assignments for entity "DE1_SOC" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK2_50 -entity DE1_SOC was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK3_50 -entity DE1_SOC was ignored
@@ -2807,72 +2808,77 @@ Warning (20013): Ignored 70 assignments for entity "DE1_SOC" -- entity does not 
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[8] -entity DE1_SOC was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[9] -entity DE1_SOC was ignored
 Info (278001): Inferred 7 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MapGenerator:mp|Div1" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/MapGenerator.v Line: 94
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MapGenerator:mp|Div6" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/MapGenerator.v Line: 162
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MapGenerator:mp|Div3" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/MapGenerator.v Line: 96
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MapGenerator:mp|Div2" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/MapGenerator.v Line: 95
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MapGenerator:mp|Div5" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/MapGenerator.v Line: 98
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MapGenerator:mp|Div4" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/MapGenerator.v Line: 97
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MapGenerator:mp|Div0" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/MapGenerator.v Line: 93
-Info (12130): Elaborated megafunction instantiation "MapGenerator:mp|lpm_divide:Div1" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/MapGenerator.v Line: 94
-Info (12133): Instantiated megafunction "MapGenerator:mp|lpm_divide:Div1" with the following parameter: File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/MapGenerator.v Line: 94
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MapGenerator:mp|Div3" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 96
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MapGenerator:mp|Div2" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 95
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MapGenerator:mp|Div5" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 98
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MapGenerator:mp|Div4" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 97
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MapGenerator:mp|Div1" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 94
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MapGenerator:mp|Div6" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 162
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "MapGenerator:mp|Div0" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 93
+Info (12130): Elaborated megafunction instantiation "MapGenerator:mp|lpm_divide:Div3" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 96
+Info (12133): Instantiated megafunction "MapGenerator:mp|lpm_divide:Div3" with the following parameter: File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 96
     Info (12134): Parameter "LPM_WIDTHN" = "11"
     Info (12134): Parameter "LPM_WIDTHD" = "6"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hbm.tdf
-    Info (12023): Found entity 1: lpm_divide_hbm File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/db/lpm_divide_hbm.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_hbm File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/db/lpm_divide_hbm.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_nlh File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/db/sign_div_unsign_nlh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_nlh File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/db/sign_div_unsign_nlh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kve.tdf
-    Info (12023): Found entity 1: alt_u_div_kve File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/db/alt_u_div_kve.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "MapGenerator:mp|lpm_divide:Div6" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/MapGenerator.v Line: 162
-Info (12133): Instantiated megafunction "MapGenerator:mp|lpm_divide:Div6" with the following parameter: File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/MapGenerator.v Line: 162
+    Info (12023): Found entity 1: alt_u_div_kve File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/db/alt_u_div_kve.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "MapGenerator:mp|lpm_divide:Div2" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 95
+Info (12133): Instantiated megafunction "MapGenerator:mp|lpm_divide:Div2" with the following parameter: File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 95
+    Info (12134): Parameter "LPM_WIDTHN" = "11"
+    Info (12134): Parameter "LPM_WIDTHD" = "6"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12130): Elaborated megafunction instantiation "MapGenerator:mp|lpm_divide:Div1" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 94
+Info (12133): Instantiated megafunction "MapGenerator:mp|lpm_divide:Div1" with the following parameter: File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 94
+    Info (12134): Parameter "LPM_WIDTHN" = "11"
+    Info (12134): Parameter "LPM_WIDTHD" = "6"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12130): Elaborated megafunction instantiation "MapGenerator:mp|lpm_divide:Div6" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 162
+Info (12133): Instantiated megafunction "MapGenerator:mp|lpm_divide:Div6" with the following parameter: File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/MapGenerator.v Line: 162
     Info (12134): Parameter "LPM_WIDTHN" = "9"
     Info (12134): Parameter "LPM_WIDTHD" = "6"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_8am.tdf
-    Info (12023): Found entity 1: lpm_divide_8am File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/db/lpm_divide_8am.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_8am File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/db/lpm_divide_8am.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_ekh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_ekh File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/db/sign_div_unsign_ekh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_ekh File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/db/sign_div_unsign_ekh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_2te.tdf
-    Info (12023): Found entity 1: alt_u_div_2te File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/db/alt_u_div_2te.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "MapGenerator:mp|lpm_divide:Div3" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/MapGenerator.v Line: 96
-Info (12133): Instantiated megafunction "MapGenerator:mp|lpm_divide:Div3" with the following parameter: File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/MapGenerator.v Line: 96
-    Info (12134): Parameter "LPM_WIDTHN" = "11"
-    Info (12134): Parameter "LPM_WIDTHD" = "6"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12130): Elaborated megafunction instantiation "MapGenerator:mp|lpm_divide:Div2" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/MapGenerator.v Line: 95
-Info (12133): Instantiated megafunction "MapGenerator:mp|lpm_divide:Div2" with the following parameter: File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/MapGenerator.v Line: 95
-    Info (12134): Parameter "LPM_WIDTHN" = "11"
-    Info (12134): Parameter "LPM_WIDTHD" = "6"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+    Info (12023): Found entity 1: alt_u_div_2te File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/db/alt_u_div_2te.tdf Line: 23
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (13000): Registers with preset signals will power-up high File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 170
+Info (13000): Registers with preset signals will power-up high File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 177
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "imgActY[15]" is converted into an equivalent circuit using register "imgActY[15]~synth" and latch "imgActY[15]~synth" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 170
-    Warning (13310): Register "imgActY[12]" is converted into an equivalent circuit using register "imgActY[12]~synth" and latch "imgActY[15]~synth" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 170
-    Warning (13310): Register "imgActY[10]" is converted into an equivalent circuit using register "imgActY[10]~synth" and latch "imgActY[15]~synth" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 170
-    Warning (13310): Register "imgActY[9]" is converted into an equivalent circuit using register "imgActY[9]~synth" and latch "imgActY[15]~synth" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 170
-    Warning (13310): Register "imgActX[15]" is converted into an equivalent circuit using register "imgActX[15]~synth" and latch "imgActY[15]~synth" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 170
-    Warning (13310): Register "imgActX[13]" is converted into an equivalent circuit using register "imgActX[13]~synth" and latch "imgActX[13]~synth" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 170
-    Warning (13310): Register "imgActX[10]" is converted into an equivalent circuit using register "imgActX[10]~synth" and latch "imgActY[15]~synth" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 170
-    Warning (13310): Register "imgOldActY[15]" is converted into an equivalent circuit using register "imgOldActY[15]~synth" and latch "imgActY[15]~synth" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 170
-    Warning (13310): Register "imgOldActY[12]" is converted into an equivalent circuit using register "imgOldActY[12]~synth" and latch "imgActY[15]~synth" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 170
-    Warning (13310): Register "imgOldActY[10]" is converted into an equivalent circuit using register "imgOldActY[10]~synth" and latch "imgActY[15]~synth" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 170
-    Warning (13310): Register "imgOldActY[9]" is converted into an equivalent circuit using register "imgOldActY[9]~synth" and latch "imgActY[15]~synth" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 170
-    Warning (13310): Register "imgOldActX[15]" is converted into an equivalent circuit using register "imgOldActX[15]~synth" and latch "imgActY[15]~synth" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 170
-    Warning (13310): Register "imgOldActX[13]" is converted into an equivalent circuit using register "imgOldActX[13]~synth" and latch "imgActX[13]~synth" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 170
-    Warning (13310): Register "imgOldActX[10]" is converted into an equivalent circuit using register "imgOldActX[10]~synth" and latch "imgActY[15]~synth" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 170
+    Warning (13310): Register "imgActY[15]" is converted into an equivalent circuit using register "imgActY[15]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 177
+    Warning (13310): Register "imgActY[12]" is converted into an equivalent circuit using register "imgActY[12]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 177
+    Warning (13310): Register "imgActY[10]" is converted into an equivalent circuit using register "imgActY[10]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 177
+    Warning (13310): Register "imgActY[9]" is converted into an equivalent circuit using register "imgActY[9]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 177
+    Warning (13310): Register "imgActX[15]" is converted into an equivalent circuit using register "imgActX[15]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 177
+    Warning (13310): Register "imgActX[13]" is converted into an equivalent circuit using register "imgActX[13]~synth" and latch "imgActX[13]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 177
+    Warning (13310): Register "imgActX[10]" is converted into an equivalent circuit using register "imgActX[10]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 177
+    Warning (13310): Register "imgOldActY[15]" is converted into an equivalent circuit using register "imgOldActY[15]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 177
+    Warning (13310): Register "imgOldActY[12]" is converted into an equivalent circuit using register "imgOldActY[12]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 177
+    Warning (13310): Register "imgOldActY[10]" is converted into an equivalent circuit using register "imgOldActY[10]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 177
+    Warning (13310): Register "imgOldActY[9]" is converted into an equivalent circuit using register "imgOldActY[9]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 177
+    Warning (13310): Register "imgOldActX[15]" is converted into an equivalent circuit using register "imgOldActX[15]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 177
+    Warning (13310): Register "imgOldActX[13]" is converted into an equivalent circuit using register "imgOldActX[13]~synth" and latch "imgActX[13]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 177
+    Warning (13310): Register "imgOldActX[10]" is converted into an equivalent circuit using register "imgOldActX[10]~synth" and latch "imgActY[15]~synth" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 177
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 39
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 39
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 33
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 33
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 33
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 33
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 33
 Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register angle[0] will power up to Low File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 170
+    Critical Warning (18010): Register angle[0] will power up to Low File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 177
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Warning (20013): Ignored 70 assignments for entity "DE1_SOC" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK2_50 -entity DE1_SOC was ignored
@@ -2945,38 +2951,38 @@ Warning (20013): Ignored 70 assignments for entity "DE1_SOC" -- entity does not 
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[7] -entity DE1_SOC was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[8] -entity DE1_SOC was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[9] -entity DE1_SOC was ignored
-Info (144001): Generated suppressed messages file C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/output_files/AntMan.map.smsg
+Info (144001): Generated suppressed messages file D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/output_files/AntMan.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 5 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Warning: RST port on the PLL is not properly connected on instance PLL:p0|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altera_pll.v Line: 749
+Warning: RST port on the PLL is not properly connected on instance PLL:p0|PLL_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: d:/quartus/fpga/quartus/libraries/megafunctions/altera_pll.v Line: 749
     Info: Must be connected
 Warning (21074): Design contains 11 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 28
-    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 28
-    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 28
-    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 29
-    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 29
-    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 29
-    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 29
-    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 29
-    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 29
-    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 29
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/FrameBufferDisplay7.v Line: 29
-Info (21057): Implemented 22016 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "KEY[1]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 28
+    Warning (15610): No output dependent on input pin "KEY[2]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 28
+    Warning (15610): No output dependent on input pin "KEY[3]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 28
+    Warning (15610): No output dependent on input pin "SW[2]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[3]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[4]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[5]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[6]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[7]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[8]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 29
+    Warning (15610): No output dependent on input pin "SW[9]" File: D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/FrameBufferDisplay7.v Line: 29
+Info (21057): Implemented 22028 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
-    Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 21971 logic cells
+    Info (21059): Implemented 39 output pins
+    Info (21061): Implemented 21973 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 390 warnings
-    Info: Peak virtual memory: 5049 megabytes
-    Info: Processing ended: Sun Apr 25 09:38:02 2021
-    Info: Elapsed time: 00:01:20
-    Info: Total CPU time (on all processors): 00:01:14
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 396 warnings
+    Info: Peak virtual memory: 5066 megabytes
+    Info: Processing ended: Fri Feb 25 21:52:01 2022
+    Info: Elapsed time: 00:01:00
+    Info: Total CPU time (on all processors): 00:01:20
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/EWann/Documents/trine/sp21/ece363/quartus/AntMan_DE1/output_files/AntMan.map.smsg.
+The suppressed messages can be found in D:/OneDrive/OneDrive - Trine University/AntMan/AntMan_DE1/output_files/AntMan.map.smsg.
 
 

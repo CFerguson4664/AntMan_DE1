@@ -18,8 +18,8 @@ module FrameBufferDisplay7(
 	HEX2,
 	HEX3,
 	HEX4,
-	HEX5,
-	LEDR,*/
+	HEX5,*/
+	LEDR,
 	KEY,
 	SW
 );			
@@ -29,8 +29,8 @@ input[3:0] KEY;
 input[9:0] SW;
 
 //Debug outputs
-/*output[6:0] HEX0,HEX1,HEX2,HEX3,HEX4,HEX5;
-output[9:0] LEDR;*/
+/*output[6:0] HEX0,HEX1,HEX2,HEX3,HEX4,HEX5;*/
+output[9:0] LEDR;
 
 //Clock input
 input CLOCK_50;
@@ -123,12 +123,19 @@ assign VGA_B = blue;
 assign VGA_CLK = pixelCLK;
 assign VGA_SYNC_N = 1'b0;
 
-
+//
 //MapGenerator provides all of the data reguarding the map
 MapGenerator mp(VPixel,mapData,imgX,imgY,inBounds,ant1X2,ant1Y2,ant2X2,ant2Y2, ant1IB,ant2IB,SW[1:0],KEY[0],startX,startY,win);
 
 //Connection to the controlling ant FSM
 antFSM antFSMMain(ant1IB,ant2IB,FW,TLeft,TRight,logicCLK,KEY[0]);
+
+
+assign LEDR[0] = ant1IB;
+assign LEDR[1] = ant2IB;
+assign LEDR[2] = FW;
+assign LEDR[3] = TLeft;
+assign LEDR[4] = TRight;
 
 //Position the image using the whole number part of the position
 assign imgX = imgActX[17:7];
